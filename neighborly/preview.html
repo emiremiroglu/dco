@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ad Preview</title>
+  </head>
+  <body class="bg-zinc-50 h-screen w-screen">
+    <main class="w-screen h-screen flex flex-col items-center justify-center gap-20">
+      <iframe class="shadow-lg bg-white rounded-sm transition-all" src="./banner.html" width="300" height="250"></iframe>
+      <select>
+        <option value="300x250">Medium Rectangle (300 x 250)</option>
+        <option value="320x50">Mobile Banner (320 x 50)</option>
+        <option value="320x100">Large Mobile Banner (320 x 100)</option>
+        <option value="728x90">Leaderboard (728 x 90)</option>
+        <option value="970x90">Large Leaderboard (970 x 90)</option>
+        <option value="160x600">Wide Skyscraper (160 x 600)</option>
+        <option value="300x600">Half-Page Skyscraper (300 x 600)</option>
+        <option value="970x250">Billboard (970 x 250)</option>
+        <option value="320x480">Mobile Full-Page Interstitial - Portrait (320 x 480)</option>
+        <option value="480x320">Mobile Full-Page Interstitial - Landscape (480 x 320)</option>
+      </select>
+      <!-- <input class="w-full max-w-[600px] p-4 shadow-md font-mono rounded-md"> -->
+    </main>
+    <script>
+
+
+
+      addEventListener("DOMContentLoaded", (event) => {
+        const iframe = document.querySelector('iframe')
+        const select = document.querySelector('select')
+        // const input = document.querySelector('input')
+        // iframe.src = window.localStorage.getItem('src') || './banner.html'
+        // window.localStorage.setItem('src', iframe.src)
+        // input.value = iframe.src
+
+
+        select.onchange = (e) => {
+          let width = e.target.value.split('x')[0]
+          let height = e.target.value.split('x')[1]
+          iframe.width = width
+          iframe.height = height
+        }
+      });
+    </script>
+  </body>
+</html>

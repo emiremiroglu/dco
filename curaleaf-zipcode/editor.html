@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor</title>
+  <style>
+
+    body {
+      margin: 0;
+      background: #202020;
+    }
+    
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    iframe {
+      border: 0;
+      border-radius: 2px;
+      transition: width .3s, height .3s;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <iframe src="banner.html" width="300" height="250"></iframe>
+    <select onchange="resizeFrame(this)">
+      <option></option>
+      <option value="320x50">320x50</option>
+      <option value="320x100">320x100</option>
+      <option value="300x250">300x250</option>
+      <option value="728x90">728x90</option>
+      <option value="970x250">970x250</option>
+      <option value="160x600">160x600</option>
+    </select>
+  </main>
+  <script>
+    const iframe = document.querySelector('iframe')
+    const frame_size = JSON.parse(window.localStorage.getItem('frame'))
+
+    const resizeFrame = function(el){
+      let width = el.value.split('x')[0]
+      let height = el.value.split('x')[1]
+      iframe.width = Number(width)
+      iframe.height = Number(height)
+      
+      window.localStorage.setItem('frame', JSON.stringify({
+        width: iframe.width,
+        height: iframe.height
+      }))
+
+    }
+
+    iframe.width = frame_size.width
+    iframe.height = frame_size.height
+  </script>
+</body>
+</html>

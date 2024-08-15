@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css" rel="stylesheet">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script> -->
+  <title>Neighborly</title>
+  <style>
+    p {
+      margin-bottom: 20px !important;
+      line-height: 160%;
+    }
+
+    code {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 0.6em;
+    }
+
+    iframe {
+      margin-top: 30px;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="app">
+    <header class="fixed top-0 left-0 right-0 py-5 w-full bg-gray-200">
+      <section class="flex flex-col max-w-[970px] mx-auto gap-2">
+        <form class="grid grid-cols-2 gap-3">
+          <div class="flex flex-col gap-1">
+            <label for="CAMPAIGN_NAME">Campaign Name</label>
+            <select id="campaign" name="CAMPAIGN_NAME" class="border-0 p-3 rounded-md">
+              <optgroup label="Display_CRM">                
+                <option>General_Display_CRM_Tampa</option>
+                <option>General_Display_CRM_Nashville</option>
+                <option>Enhance_Display_CRM_Nashville</option>
+                <option>Repair_Display_CRM_Nashville</option>
+                <option>General_Display_CRM_Sioux-Falls</option>
+                <option>Repair_Display_CRM_Sioux-Falls</option>
+                <option>General_Display_CRM_Lexington</option>
+                <option>Maintain_Display_CRM_Lexington</option>
+                <option>Repair_Display_CRM_Lexington</option>
+                <option>General_Display_CRM_Memphis</option>
+                <option>Maintain_Display_CRM_Memphis</option>
+                <option>Repair_Display_CRM_Memphis</option>
+              </optgroup>
+              <optgroup label="Display_LAL">
+                <option>General_Display_LAL_Tampa</option>
+                <option>General_Display_LAL_Nashville</option>
+                <option>Enhance_Display_LAL_Nashville</option>
+                <option>Repair_Display_LAL_Nashville</option>
+                <option>General_Display_LAL_Sioux-Falls</option>
+                <option>Repair_Display_LAL_Sioux-Falls</option>
+                <option>General_Display_LAL_Lexington</option>
+                <option>Maintain_Display_LAL_Lexington</option>
+                <option>Repair_Display_LAL_Lexington</option>
+                <option>General_Display_LAL_Memphis</option>
+                <option>Maintain_Display_LAL_Memphis</option>
+                <option>Repair_Display_LAL_Memphis</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label for="zip">Zip Code</label>
+            <select id="zipcode" name="ZIPCODE" class="border-0 p-3 rounded-md">
+            <select>
+          </div>
+        </form>
+
+        <div class="flex flex-col gap-2">
+          <code id="status" class="pt-3"></code>
+        </div>
+      </section>
+    </header>
+    <section class="max-w-[970px] mx-auto py-48">
+      <section class="mb-10">
+        <div>
+          <iframe src="./banner.html" width="970" height="250"></iframe>
+          <code>970x250</code>
+        </div>
+
+        <div>
+          <iframe src="./banner.html" width="728" height="90"></iframe>
+          <code>728x90</code>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-3 gap-10">
+        <div class="col-span-2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet fermentum felis. Phasellus fermentum
+            feugiat elit. Morbi scelerisque erat vel consectetur molestie. Quisque euismod vitae sapien eu tempor. Donec
+            sed sem nunc. Vestibulum elit massa, auctor vitae ex ac, hendrerit bibendum nunc. Quisque placerat tellus
+            neque, quis molestie mi cursus in. Maecenas in justo et dolor placerat fermentum. Morbi faucibus erat sed
+            enim commodo luctus. Pellentesque a lectus id erat ultricies scelerisque.</p>
+          <p>Nunc ut tincidunt tellus. Phasellus metus sem, consequat ac efficitur quis, egestas at tortor. Curabitur a
+            pretium ipsum. Nulla ut nulla massa. Praesent nunc turpis, faucibus nec dolor id, venenatis tincidunt quam.
+            Nulla vehicula sollicitudin lectus sit amet consequat. Etiam nec dolor purus. Suspendisse potenti. Nam vitae
+            felis vitae tortor faucibus ultricies. Morbi in risus quis leo tempus molestie.</p>
+          <p>Quisque faucibus mauris eu nisi tristique placerat in quis leo. Donec tristique, ex non aliquam pulvinar,
+            nisi elit aliquam nulla, sed eleifend augue ligula vitae lacus. Cras eget orci metus. Cras quis neque odio.
+            Nam et enim felis. Sed hendrerit rutrum ligula, nec fringilla urna efficitur vel. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque vitae posuere diam. Sed
+            rutrum justo quis pulvinar tincidunt. Nam ornare eros quis ligula venenatis, et tincidunt velit blandit.
+            Curabitur eleifend, massa porttitor elementum dapibus, nisi turpis laoreet erat, sit amet laoreet leo leo
+            sit amet mi. In erat mi, fringilla ut mattis nec, egestas suscipit libero.</p>
+          <p>Morbi eu rutrum neque. Sed ut risus elit. Praesent nec justo nibh. Etiam efficitur feugiat turpis et
+            interdum. Phasellus sed consequat ipsum. Donec feugiat tellus sed est eleifend auctor consequat egestas
+            metus. Pellentesque sit amet arcu ipsum. Duis elementum congue diam, vel tincidunt mauris venenatis eget.
+            Sed elementum magna id quam ornare aliquam.</p>
+          <p>Nunc a turpis ac purus porta auctor eleifend a mi. Phasellus commodo a augue nec interdum. Proin nec nulla
+            eget arcu suscipit posuere. Cras euismod ipsum porttitor dui rhoncus lacinia. Nulla elementum metus a mauris
+            auctor semper. Donec viverra cursus mollis. Suspendisse hendrerit laoreet mauris, vitae ultricies sem
+            aliquam id.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet fermentum felis. Phasellus fermentum
+            feugiat elit. Morbi scelerisque erat vel consectetur molestie. Quisque euismod vitae sapien eu tempor. Donec
+            sed sem nunc. Vestibulum elit massa, auctor vitae ex ac, hendrerit bibendum nunc. Quisque placerat tellus
+            neque, quis molestie mi cursus in. Maecenas in justo et dolor placerat fermentum. Morbi faucibus erat sed
+            enim commodo luctus. Pellentesque a lectus id erat ultricies scelerisque.</p>
+          <p>Quisque faucibus mauris eu nisi tristique placerat in quis leo. Donec tristique, ex non aliquam pulvinar,
+            nisi elit aliquam nulla, sed eleifend augue ligula vitae lacus. Cras eget orci metus. Cras quis neque odio.
+            Nam et enim felis. Sed hendrerit rutrum ligula, nec fringilla urna efficitur vel. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque vitae posuere diam. Sed
+            rutrum justo quis pulvinar tincidunt. Nam ornare eros quis ligula venenatis, et tincidunt velit blandit.
+            Curabitur eleifend, massa porttitor elementum dapibus, nisi turpis laoreet erat, sit amet laoreet leo leo
+            sit amet mi. In erat mi, fringilla ut mattis nec, egestas suscipit libero.</p>
+          <p>Morbi eu rutrum neque. Sed ut risus elit. Praesent nec justo nibh. Etiam efficitur feugiat turpis et
+            interdum. Phasellus sed consequat ipsum. Donec feugiat tellus sed est eleifend auctor consequat egestas
+            metus. Pellentesque sit amet arcu ipsum. Duis elementum congue diam, vel tincidunt mauris venenatis eget.
+          </p>
+          <p>Nunc ut tincidunt tellus. Phasellus metus sem, consequat ac efficitur quis, egestas at tortor. Curabitur a
+            pretium ipsum. Nulla ut nulla massa. Praesent nunc turpis, faucibus nec dolor id, venenatis tincidunt quam.
+            Nulla vehicula sollicitudin lectus sit amet consequat. Etiam nec dolor purus. Suspendisse potenti. Nam vitae
+            felis vitae tortor faucibus ultricies. Morbi in risus quis leo tempus molestie.</p>
+          <p>Quisque faucibus mauris eu nisi tristique placerat in quis leo. Donec tristique, ex non aliquam pulvinar,
+            nisi elit aliquam nulla, sed eleifend augue ligula vitae lacus. Cras eget orci metus. Cras quis neque odio.
+            Nam et enim felis. Sed hendrerit rutrum ligula, nec fringilla urna efficitur vel. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque vitae posuere diam. Sed
+            rutrum justo quis pulvinar tincidunt. Nam ornare eros quis ligula venenatis, et tincidunt velit blandit.
+            Curabitur eleifend, massa porttitor elementum dapibus, nisi turpis laoreet erat, sit amet laoreet leo leo
+            sit amet mi. In erat mi, fringilla ut mattis nec, egestas suscipit libero.</p>
+          <p>Morbi eu rutrum neque. Sed ut risus elit. Praesent nec justo nibh. Etiam efficitur feugiat turpis et
+            interdum. Phasellus sed consequat ipsum. Donec feugiat tellus sed est eleifend auctor consequat egestas
+            metus. Pellentesque sit amet arcu ipsum. Duis elementum congue diam, vel tincidunt mauris venenatis eget.
+            Sed elementum magna id quam ornare aliquam.</p>
+          <p>Nunc a turpis ac purus porta auctor eleifend a mi. Phasellus commodo a augue nec interdum. Proin nec nulla
+            eget arcu suscipit posuere. Cras euismod ipsum porttitor dui rhoncus lacinia. Nulla elementum metus a mauris
+            auctor semper. Donec viverra cursus mollis. Suspendisse hendrerit laoreet mauris, vitae ultricies sem
+            aliquam id.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet fermentum felis. Phasellus fermentum
+            feugiat elit. Morbi scelerisque erat vel consectetur molestie. Quisque euismod vitae sapien eu tempor. Donec
+            sed sem nunc. Vestibulum elit massa, auctor vitae ex ac, hendrerit bibendum nunc. Quisque placerat tellus
+            neque, quis molestie mi cursus in. Maecenas in justo et dolor placerat fermentum. Morbi faucibus erat sed
+            enim commodo luctus. Pellentesque a lectus id erat ultricies scelerisque.</p>
+          <p>Quisque faucibus mauris eu nisi tristique placerat in quis leo. Donec tristique, ex non aliquam pulvinar,
+            nisi elit aliquam nulla, sed eleifend augue ligula vitae lacus. Cras eget orci metus. Cras quis neque odio.
+            Nam et enim felis. Sed hendrerit rutrum ligula, nec fringilla urna efficitur vel. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque vitae posuere diam. Sed
+            rutrum justo quis pulvinar tincidunt. Nam ornare eros quis ligula venenatis, et tincidunt velit blandit.
+            Curabitur eleifend, massa porttitor elementum dapibus, nisi turpis laoreet erat, sit amet laoreet leo leo
+            sit amet mi. In erat mi, fringilla ut mattis nec, egestas suscipit libero.</p>
+        </div>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet fermentum felis. Phasellus fermentum
+            feugiat elit.</p>
+          <iframe src="./banner.html" width="320" height="50"></iframe>
+          <code>320x50</code>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet fermentum felis. Phasellus fermentum
+            feugiat elit. Morbi scelerisque erat vel consectetur molestie.</p>
+          <iframe src="./banner.html" width="300" height="250"></iframe>
+          <code>300x250</code>
+
+          <p>Quisque euismod vitae sapien eu tempor. Donec sed sem nunc. Vestibulum elit massa, auctor vitae ex ac,
+            hendrerit bibendum nunc. Quisque placerat tellus neque, quis molestie mi cursus in. Maecenas in justo et
+            dolor placerat fermentum.</p>
+          <iframe src="./banner.html" width="300" height="600"></iframe>
+          <code>300x600</code>
+
+          <p>Quisque euismod vitae sapien eu tempor. Donec sed sem nunc. Vestibulum elit massa, auctor vitae ex ac,
+            hendrerit bibendum nunc. Quisque placerat tellus neque, quis molestie mi cursus in. Maecenas in justo et
+            dolor placerat fermentum.</p>
+          <iframe src="./banner.html" width="160" height="600"></iframe>
+          <code>160x600</code>
+        </div>
+      </section>
+
+    </section>
+  </main>
+  <script>
+
+    const form = document.querySelector('form')
+    const status = document.querySelector('#status')
+    const iframes = document.querySelectorAll('iframe')
+    
+    const campaign_select = document.querySelector('#campaign')
+    const zipcode_select = document.querySelector('#zipcode')
+
+    const codes = {
+      "nashville": [ 37077, 37167, 37227, 37014, 37082, 37070, 37122, 37214, 37129, 37215, 37220, 37024, 37065, 37068, 37072, 37229, 37062, 37152, 37064, 37069, 37075, 37076, 37121, 37067, 37071, 37073, 37205, 37027, 37138, 37221, 37032, 37035, 37010, 37146, 37040, 37172, 37041, 37042, 37043, 37037, 37130, 37149, 37131, 37118, 37016, 37020, 37128, 38402, 37127, 37060, 37095, 37153, 37174, 38401, 37086, 37085, 37132, 37133, 37063, 37246, 37234, 37242, 37066, 37232, 37243, 37135, 37046, 37048, 37136, 37080, 37116, 37184, 37207, 37211, 37213, 37241, 37031, 37206, 37222, 37143, 37187, 37210, 37230, 37087, 37088, 37115, 37189, 37208, 37219, 37224, 37240, 37011, 37013, 37015, 37202, 37204, 37212, 37218, 37235, 37179, 37216, 37090, 37201, 37203, 37217, 37236, 37238, 37188, 37209, 37228, 37244, 37250 ],
+      "memphis": [ 38002, 38004, 38010, 38011, 38014, 38015, 38016, 38017, 38018, 38019, 38023, 38027, 38028, 38029, 38036, 38045, 38048, 38049, 38053, 38054, 38055, 38057, 38058, 38060, 38066, 38068, 38069, 38071, 38076, 38083, 38088, 38101, 38103, 38104, 38105, 38106, 38107, 38108, 38109, 38111, 38112, 38113, 38114, 38115, 38116, 38117, 38118, 38119, 38120, 38122, 38124, 38125, 38126, 38127, 38128, 38130, 38131, 38132, 38133, 38134, 38135, 38136, 38137, 38138, 38139, 38141, 38145, 38148, 38150, 38151, 38152, 38157, 38159, 38161, 38163, 38166, 38167, 38168, 38173, 38174, 38175, 38177, 38181, 38182, 38183, 38184, 38186, 38187, 38188, 38190, 38193, 38194, 38197, 38401, 38402, 38611, 38632, 38637, 38641, 38651, 38654, 38671, 38672, 38680, 38686 ],
+      "lexington": [ 40324, 40340, 40342, 40347, 40356, 40361, 40362, 40383, 40384, 40385, 40390, 40391, 40392, 40403, 40404, 40405, 40410, 40422, 40423, 40444, 40461, 40475, 40476, 40502, 40503, 40504, 40505, 40506, 40507, 40508, 40509, 40510, 40511, 40512, 40513, 40514, 40515, 40516, 40517, 40522, 40523, 40524, 40526, 40533, 40536, 40544, 40546, 40550, 40555, 40574, 40575, 40576, 40577, 40578, 40579, 40580, 40581, 40582, 40583, 40588, 40591, 40598, 40602, 40603, 40604, 40618, 40619, 40620, 40621, 40622 ],
+      "sioux-falls": [ 57003, 57005, 57013, 57014, 57015, 57016, 57018, 57020, 57021, 57022, 57027, 57030, 57032, 57033, 57035, 57036, 57039, 57041, 57043, 57048, 57053, 57055, 57064, 57068, 57070, 57077, 57101, 57103, 57104, 57105, 57106, 57107, 57108, 57109, 57110, 57117, 57118, 57186, 57193, 57197, 57198 ],
+      "tampa": [ 33769, 33775, 33776, 33771, 33738, 33760, 33708, 33777, 33778, 33762, 33764, 33773, 33772, 33785, 33757, 33758, 33767, 33755, 33763, 33786, 33765, 33770, 33779, 34698, 33756, 33766, 34697, 34205, 34206, 34208, 34211, 34264, 34202, 34203, 34201, 34280, 34204, 34209, 34229, 34234, 34236, 34277, 34285, 34292, 34235, 34276, 34239, 34272, 34284, 34293, 34231, 34233, 34242, 34237, 34232, 34238, 34274, 34275, 34689, 34692, 34638, 34653, 34685, 34655, 34610, 34680, 34656, 34668, 34673, 34688, 34690, 34691, 34654, 34677, 34637, 34652, 33613, 33558, 33556, 33615, 33625, 33635, 33682, 33548, 33634, 33688, 33626, 33694, 33618, 33624, 33685, 33549, 33612, 33705, 33709, 33733, 34682, 34684, 33715, 33729, 33734, 33740, 33741, 33747, 33712, 33714, 33731, 33761, 33702, 33704, 33710, 33707, 33716, 33736, 33742, 34695, 34683, 33701, 33703, 33711, 33713, 33732, 33743, 33774, 33780, 33782, 33784, 34660, 33706, 33744, 33759, 33781, 33578, 33596, 33568, 33547, 33569, 34207, 34210, 34212, 34215, 34217, 34218, 34219, 34220, 34221, 34222, 34223, 34224, 34228, 34230, 34240, 34241, 34243, 34250, 34251, 34260, 34270, 34281, 34282, 34286, 34287, 34288, 34289, 34290, 34291, 34295, 34216, 34674, 34667, 33524, 33540, 33541, 33559, 33572, 33575, 33586, 33594, 33595, 33603, 33619, 33621, 33686, 33730, 34249, 33523, 33530, 33537, 33542, 33574, 33587, 33601, 33602, 33617, 33622, 33646, 33647, 33684, 33687, 34681, 33525, 33527, 33576, 33598, 33660, 33673, 33675, 33681, 34639, 33503, 33510, 33566, 33570, 33609, 33611, 33677, 33679, 34669, 34679, 33508, 33534, 33539, 33544, 33564, 33579, 33592, 33607, 33620, 33650, 33672, 33689, 33509, 33511, 33543, 33545, 33563, 33565, 33571, 33584, 33604, 33606, 33614, 33616, 33633, 33567, 33608, 33610, 33629, 33631, 33637, 33655, 33664, 33680, 33526, 33573, 33583, 33593, 33605, 33623, 33630, 33674, 33810, 33550, 33809, 33849, 33860, 33662, 33663 ]
+    }
+
+    addEventListener("DOMContentLoaded", (event) => {
+
+      let campaign_name = campaign_select.value
+      let zipcode = zipcode_select.value
+
+      for(i in codes['nashville']) {
+        let option = document.createElement('option')
+            option.innerHTML = codes['nashville'][i]
+        zipcode_select.appendChild(option)
+      }
+
+      zipcode = zipcode_select.value
+
+      let query = `?CAMPAIGN_NAME=${campaign_name}&ZIPCODE=${zipcode}`
+      let src = './banner.html' + query
+
+      status.innerHTML = src
+
+      for(i in iframes) {
+        iframes[i].src = src
+      }
+      
+    });
+
+    form.addEventListener('change', function() {
+      let campaign_name = campaign_select.value
+      let zipcode = zipcode_select.value
+
+      let arr = campaign_name.split('_')
+
+      let location = arr[arr.length-1].toLowerCase()
+
+      zipcode_select.innerHTML = ''
+
+      for(i in codes[location]) {
+        let option = document.createElement('option')
+            option.innerHTML = codes[location][i]
+            option.value = codes[location][i]
+        zipcode_select.appendChild(option)
+      }
+
+      zipcode = zipcode_select.value
+
+      let query = `?CAMPAIGN_NAME=${campaign_name}&ZIPCODE=${zipcode}`
+      let src = './banner.html' + query
+
+      status.innerHTML = src
+
+      for(i in iframes) {
+        iframes[i].src = src
+      }
+
+    });
+  </script>
+</body>
+
+</html>

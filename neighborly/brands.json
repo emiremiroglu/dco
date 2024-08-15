@@ -1,0 +1,170 @@
+[
+  {
+    "id": "ASV",
+    "name": "Aire Serv",
+    "background": "#0033a0",
+    "foreground": "#009bde",
+    "fill": "#009bde",
+    "category": "repair"
+  },
+  {
+    "id": "MDG",
+    "name": "Glass Doctor",
+    "background": "#06038d",
+    "foreground": "#000050",
+    "fill": "#60afe6",
+    "category": "repair"
+  },
+  {
+    "id": "MDG-H",
+    "name": "Glass Doctor (Home & Business)",
+    "background": "#06038d",
+    "foreground": "#000050",
+    "fill": "#60afe6",
+    "category": "repair"
+  },
+  {
+    "id": "MDG-A",
+    "name": "Glass Doctor (Auto)",
+    "background": "#06038d",
+    "foreground": "#000050",
+    "fill": "#60afe6",
+    "category": "repair"
+  },
+  {
+    "id": "MRA",
+    "name": "Mr. Appliance",
+    "background": "#002554",
+    "foreground": "#f4633a",
+    "fill": "#f4633a",
+    "category": "repair"
+  },
+  {
+    "id": "MRE",
+    "name": "Mr. Electric",
+    "background": "#006ac6",
+    "foreground": "#f1c400",
+    "fill": "#f1c400",
+    "category": "repair"
+  },
+  {
+    "id": "MRH",
+    "name": "Mr. Handyman",
+    "background": "#b52126",
+    "foreground": "#7e191c",
+    "fill": "#ebb021",
+    "category": "repair"
+  },
+  {
+    "id": "MRR",
+    "name": "Mr. Rooter Plumbing",
+    "background": "#003da5",
+    "foreground": "#002b66",
+    "fill": "#da291c",
+    "category": "repair"
+  },
+  {
+    "id": "PDS",
+    "name": "Precision Garage Door Service",
+    "background": "#03533e",
+    "foreground": "#003728",
+    "fill": "#e6d2ac",
+    "category": "repair"
+  },
+  {
+    "id": "DVW",
+    "name": "Dryer Vent Wizard",
+    "background": "#463c96",
+    "foreground": "#2d2355",
+    "fill": "#fed600",
+    "category": "maintain"
+  },
+  {
+    "id": "MLY",
+    "name": "Molly Maid",
+    "background": "#071d49",
+    "foreground": "#0a0a26",
+    "fill": "#fc85b6",
+    "category": "maintain"
+  },
+  {
+    "id": "JUK",
+    "name": "Junk King",
+    "background": "#b4171d",
+    "foreground": "#8b0f14",
+    "fill": "#e2c675",
+    "category": "maintain"
+  },
+  {
+    "id": "MOJ",
+    "name": "Mosquito Joe",
+    "background": "#43b02a",
+    "foreground": "#2c8214",
+    "fill": "#fbe122",
+    "category": "maintain"
+  },
+  {
+    "id": "LAP",
+    "name": "Lawn Pride",
+    "background": "#d14919",
+    "foreground": "#9f350f",
+    "fill": "#48cdaa",
+    "category": "maintain"
+  },
+  {
+    "id": "WDG",
+    "name": "Window Genie",
+    "background": "#dfdfdf",
+    "foreground": "#202020",
+    "fill": "",
+    "category": "maintain"
+  },
+  {
+    "id": "FSP",
+    "name": "Five Star Painting",
+    "background": "#407ec9",
+    "foreground": "#002554",
+    "fill": "#b1e4e3",
+    "category": "enhance"
+  },
+  {
+    "id": "GUY",
+    "name": "The Grounds Guys",
+    "background": "#4a7729",
+    "foreground": "#2d5821",
+    "fill": "#f1c400",
+    "category": "enhance"
+  },
+  {
+    "id": "SHG",
+    "name": "Shelf Genie",
+    "background": "#005589",
+    "foreground": "#003557",
+    "fill": "#75bb21",
+    "category": "enhance"
+  },
+  {
+    "id": "HMS",
+    "name": "House Master",
+    "background": "#009578",
+    "foreground": "#003764",
+    "fill": "#006e5c",
+    "category": "speciality"
+  },
+  {
+    "id": "RBW",
+    "name": "Rainbow Restoration",
+    "background": "#112369",
+    "foreground": "#0098d0",
+    "fill": "#141531",
+    "category": "speciality"
+  },
+  {
+    "id": "RPM",
+    "name": "Real Property Management",
+    "background": "#002f65",
+    "foreground": "#141531",
+    "fill": "#0098d0",
+    "category": "speciality"
+  }
+]

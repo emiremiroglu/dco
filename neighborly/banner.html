@@ -1,0 +1,1187 @@
+<html lang="en">
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://creative.stackadapt.com/js/iframe-ct.js"></script>
+  <title>Neighborly</title>
+  <!-- CSS -->
+  <style>
+
+    a { text-decoration: none; }
+
+    body {
+      padding: 0;
+      margin: 0;
+      background: url('https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/background.jpg');
+      background-size: cover;
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    main {
+      display: flex;
+      overflow: hidden;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    main .container {
+      flex: 1;
+      flex-basis: 0;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    main .container .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      flex-basis: 0;
+      flex: 1;
+    }
+
+    main .container .logo img {
+      width: 100%;
+      max-width: 180px;
+    }
+
+    main .professionals {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      flex-basis: 0;
+      position: relative;
+    }
+
+    main .professionals img {
+      position: absolute;
+      height: 100%;
+    }
+
+    main .professionals :first-child {
+      left: -3%;
+      bottom: -5%;
+    }
+
+    main .professionals :nth-child(2) {
+      z-index: 99;
+    }
+
+    main .professionals :last-child {
+      right: 3%;
+      bottom: -5%;
+    }
+
+    main .professionals .button {
+      display: none;
+    }
+
+    main .container .headline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      flex: 1;
+    }
+
+    main .container .headline img {
+      width: 100%;
+    }
+
+    main .container .headline .headline_b {
+      display: none;
+    }
+
+    main .apex {
+      flex: 1;
+      flex-basis: 0;
+      background: url('https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/apex.svg') top center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    main .apex .brands {
+      display: flex;
+      gap: 20px;
+    }
+
+    main .apex .brands img {
+      width: 60px;
+      align-self: center;
+    }
+
+    main .apex .logo {
+      display: none;
+    }
+
+    .button {
+      background: #A4E6E4;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      color: #002557;
+    }
+
+    main .container .button {
+      display: none;
+    }
+
+    main .professionals .button {
+      display: none;
+    }
+
+    @media screen and (orientation: landscape) {
+      main {
+        flex-direction: row;
+      }
+    }
+
+    @media screen and (orientation: portrait) {
+      main {
+        flex-direction: column;
+      }
+    }
+
+    /* 970x250 */
+    @media screen and (min-height: 245px) and (min-width: 735px) {
+
+      main .container {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+      }
+
+      main .container .logo {
+        flex: none;
+      }
+
+      main .container .logo img {
+        height: 50px;
+        width: auto;
+      }
+
+      main .container .headline img {
+        width: 450px;
+      }
+
+      main .professionals {
+        margin-left: -8%;
+      }
+
+      main .professionals :first-child {
+        left: -15%;
+      }
+
+      main .professionals :last-child {
+        right: -15%;
+      }
+
+      main .apex {
+        flex: none;
+        background: url('https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/apex-rotated.svg') left center no-repeat;
+        background-size: cover;
+        margin-right: -20px;
+      }
+
+      main .apex .brands {
+        flex-direction: column;
+        padding-left: 60px;
+        padding-right: 50px;
+      }
+
+      main .apex .brands img {
+        width: 100px !important;
+      }
+
+      main .apex .button {
+        position: absolute;
+        top: 180px;
+        right: 200px;
+        font-size: 1.1em;
+      }
+
+    }
+
+    /* 728x90 */
+    @media screen and (min-height: 85px) and (max-height: 95px) and (min-width: 723px) and (max-width: 733px) {
+
+      main .container {
+        align-items: center;
+        padding: 20px;
+      }
+
+      main .container .logo {
+        display: none;
+      }
+
+      main .container .logo img {
+        height: 30px;
+        width: auto;
+      }
+
+      main .container .headline {
+        width: 300px;
+      }
+
+      main .professionals {
+        height: 180px;
+      }
+
+      main .professionals :first-child {
+        left: -40%;
+      }
+
+      main .professionals :last-child {
+        right: -40%;
+      }
+
+      main .apex {
+        background: url('https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/apex-rotated.svg') left center no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      main .apex .brands {
+        display: none;
+      }
+
+      main .apex .logo {
+        display: block;
+        height: 30px;
+      }
+
+      main .apex .button {
+        font-size: 0.9em;
+        padding: 10px;
+      }
+
+    }
+
+    /* 300x600 */
+    @media screen and (min-height: 595px) and (min-width: 295px) {
+
+      main .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      main .container .headline {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      main .container .headline .button {
+        display: block;
+      }
+
+      main .professionals {
+        margin-bottom: -20px;
+      }
+
+      main .professionals :first-child {
+        left: -25%;
+      }
+
+      main .professionals :last-child {
+        right: -25% !important;
+      }
+
+      main .apex .brands {
+        flex-direction: row !important;
+      }
+
+      main .apex {
+        flex: 0;
+        min-height: 100px;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      main .apex .brands img {
+        width: 70px;
+        height: auto;
+      }
+
+      main .apex .button {
+        display: none;
+      }
+    }
+
+    /* 160x600 */
+    @media screen and (min-height: 595px) and (min-width: 155px) and (max-width: 165px) {
+
+      main .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      main .container .headline .headline_a {
+        display: none;
+      }
+
+      main .container .headline .headline_b {
+        display: block;
+      }
+
+      main .professionals {
+        margin-bottom: -15px;
+        margin-right: -3%;
+      }
+
+      main .professionals :first-child {
+        left: -60%;
+      }
+
+      main .professionals :last-child {
+        right: -60%;
+      }
+
+      main .container .headline {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      main .container .headline .button {
+        display: block;
+      }
+
+      main .apex {
+        margin-bottom: -50px;
+        padding-bottom: 30px;
+      }
+
+      main .apex .brands {
+        flex-direction: column;
+      }
+
+      main .apex .brands img {
+        width: 80px;
+        height: auto;
+      }
+
+      main .apex .button {
+        display: none;
+      }
+    }
+
+    /* 300x250 */
+    @media screen and (min-width: 298px) and (max-width: 300px) and (min-height: 248px) and (max-height: 250px) {
+
+      main {
+        flex-direction: column;
+      }
+
+      main .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      main .container .logo img {
+        height: 30px;
+        width: auto;
+      }
+
+      main .container .button {
+        display: block;
+      }
+
+      main .container .headline {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      main .professionals {
+        margin-top: -70px;
+        min-height: 160px;
+        margin-right: -40%;
+      }
+
+      main .professionals :first-child {
+        left: 12%;
+      }
+
+      main .professionals :last-child {
+        right: 15%;
+      }
+
+      main .apex {
+        margin-top: -60px;
+        padding-top: 20px;
+      }
+
+      main .apex .brands img {
+        width: 50px;
+      }
+
+      main .apex .button {
+        display: none;
+      }
+    }
+
+    /* 320x100 */
+    @media screen and (min-height: 95px) and (max-height: 105px) and (min-width: 315px) and (max-width: 325px) {
+
+      main .container {
+        display: flex;
+        align-items: center;
+      }
+
+      main .professionals {
+        display: none;
+      }
+
+      .button {
+        font-size: 0.7em;
+        padding: 5px 10px;
+      }
+
+      main .apex {
+        padding: 10px;
+        background: url('https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/apex-rotated.svg') left center no-repeat;
+        background-size: cover;
+      }
+
+      main .apex .brands {
+        display: none;
+      }
+    }
+
+    /* 320x50 */
+    @media screen and (min-height: 45px) and (max-height: 55px) and (min-width: 315px) and (max-width: 325px) {
+
+      main .container {
+        display: flex;
+        align-items: center;
+      }
+
+      main .professionals {
+        display: none;
+      }
+
+      .button {
+        font-size: 0.7em;
+        padding: 5px 10px;
+      }
+
+      main .apex {
+        background: url('https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/apex-rotated.svg') left center no-repeat;
+        background-size: cover;
+        padding-left: 20px;
+        padding-right: 20px;
+        flex: 0;
+      }
+
+      main .apex .brands {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a id="link" href="https://hub.neighborly.com/" target="_blank">
+    <main>
+      <div class="container">
+        <div class="logo">
+          <img src="https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/neighborly.png">
+        </div>
+        <div class="headline">
+          <img id="headline" src="https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/headline/general.svg">
+          <div class="button">Book Now</div>
+        </div>
+      </div>
+
+      <div class="professionals">
+        <img src="https://dlyyrzii9sh86.cloudfront.net/t/neighborly/pros/pds.png">
+        <img src="https://dlyyrzii9sh86.cloudfront.net/t/neighborly/pros/mre.png">
+        <img src="https://dlyyrzii9sh86.cloudfront.net/t/neighborly/pros/asv.png">
+      </div>
+
+      <div class="apex">
+        <img class="logo" src="https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/neighborly.png">
+        <div class="button">Book Now</div>
+        <div class="brands">
+          <img src="https://dlyyrzii9sh86.cloudfront.net/t/neighborly/logo/pds.png">
+          <img src="https://dlyyrzii9sh86.cloudfront.net/t/neighborly/logo/mre.png">
+          <img src="https://dlyyrzii9sh86.cloudfront.net/t/neighborly/logo/asv.png">
+        </div>
+      </div>
+    </main>
+  </a>
+  <script>
+    const data = {
+      "33769": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33775": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33776": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33771": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33738": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33760": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33708": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33777": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33778": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33762": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33764": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33773": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33772": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33785": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33757": { "brands": [ "ASV", "FSP", "MDG", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33758": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33767": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33755": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33763": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33786": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33765": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33770": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33779": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "34698": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33756": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33766": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "34697": { "brands": [ "ASV", "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "34205": { "brands": [ "ASV", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34206": { "brands": [ "ASV", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34208": { "brands": [ "ASV", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34211": { "brands": [ "ASV", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "WDG" ] }, 
+      "34264": { "brands": [ "ASV", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34202": { "brands": [ "ASV", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34203": { "brands": [ "ASV", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34201": { "brands": [ "ASV", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34280": { "brands": [ "ASV", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34204": { "brands": [ "ASV", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34209": { "brands": [ "ASV", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34229": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRH", "MRR" ] }, 
+      "34234": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRH", "MRR" ] }, 
+      "34236": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34277": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34285": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRH" ] }, 
+      "34292": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRH" ] }, 
+      "34235": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRH", "MRR" ] }, 
+      "34276": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34239": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34272": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRH" ] }, 
+      "34284": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRH" ] }, 
+      "34293": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRH" ] }, 
+      "34231": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34233": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34242": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34237": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34232": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34238": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRA", "MRH", "MRR" ] }, 
+      "34274": { "brands": [ "FSP", "JUK", "MDG", "MOJ", "MRH" ] }, 
+      "34275": { "brands": [ "FSP", "JUK", "MDG", "MLY", "MOJ", "MRH" ] }, 
+      "34689": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "34692": { "brands": [ "FSP", "MDG", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "34638": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "34653": { "brands": [ "FSP", "MDG", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "34685": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "34655": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "34610": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "34680": { "brands": [ "FSP", "MDG", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "34656": { "brands": [ "FSP", "MDG", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "34668": { "brands": [ "FSP", "MDG", "MOJ", "MRE", "PDS" ] }, 
+      "34673": { "brands": [ "FSP", "MDG", "MOJ", "MRE", "PDS" ] }, 
+      "34688": { "brands": [ "FSP", "MDG", "MLY", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "34690": { "brands": [ "FSP", "MDG", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "34691": { "brands": [ "FSP", "MDG", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "34654": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "PDS" ] }, 
+      "34677": { "brands": [ "FSP", "MDG", "MLY", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "34637": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "34652": { "brands": [ "FSP", "MDG", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "33613": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33558": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "33556": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "33615": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33625": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33635": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33682": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33548": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "33634": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33688": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33626": { "brands": [ "FSP", "MDG", "MLY", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33694": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33618": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33624": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33685": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33549": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "33612": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33705": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33709": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33733": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "34682": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "34684": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33715": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33729": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33734": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33740": { "brands": [ "FSP", "MDG", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33741": { "brands": [ "FSP", "MDG", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33747": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33712": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33714": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33731": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33761": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33702": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33704": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33710": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33707": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33716": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33736": { "brands": [ "FSP", "MDG", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33742": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "34695": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "34683": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33701": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33703": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33711": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33713": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33732": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33743": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33774": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33780": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33782": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33784": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "34660": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33706": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33744": { "brands": [ "FSP", "MLY", "MOJ", "MRH", "MRR" ] }, 
+      "33759": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33781": { "brands": [ "FSP", "MDG", "MLY", "MOJ", "MRH", "MRR", "PDS" ] }, 
+      "33578": { "brands": [ "GUY", "MDG", "MLY", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33596": { "brands": [ "GUY", "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33568": { "brands": [ "GUY", "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33547": { "brands": [ "GUY", "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33569": { "brands": [ "GUY", "MDG", "MLY", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "34207": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRR", "WDG" ] }, 
+      "34210": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRR", "WDG" ] }, 
+      "34212": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "WDG" ] }, 
+      "34215": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34217": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34218": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34219": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "WDG" ] }, 
+      "34220": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34221": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34222": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "WDG" ] }, 
+      "34223": { "brands": [ "JUK" ] }, 
+      "34224": { "brands": [ "JUK" ] }, 
+      "34228": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34230": { "brands": [ "JUK", "MDG", "MLY", "MRA", "MRH", "MRR" ] }, 
+      "34240": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34241": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRH" ] }, 
+      "34243": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34250": { "brands": [ "JUK", "MDG", "MLY", "MRA", "MRH", "MRR" ] }, 
+      "34251": { "brands": [ "JUK", "MDG", "MLY", "MRA", "MRH", "WDG" ] }, 
+      "34260": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34270": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR" ] }, 
+      "34281": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRR", "WDG" ] }, 
+      "34282": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRR", "WDG" ] }, 
+      "34286": { "brands": [ "JUK", "MDG", "MLY", "MOJ" ] }, 
+      "34287": { "brands": [ "JUK", "MDG", "MLY", "MOJ" ] }, 
+      "34288": { "brands": [ "JUK", "MDG", "MLY", "MOJ" ] }, 
+      "34289": { "brands": [ "JUK", "MDG", "MLY", "MOJ" ] }, 
+      "34290": { "brands": [ "JUK", "MDG", "MLY", "MOJ" ] }, 
+      "34291": { "brands": [ "JUK", "MDG", "MLY", "MOJ" ] }, 
+      "34295": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRH" ] }, 
+      "34216": { "brands": [ "JUK", "MDG", "MLY", "MOJ", "MRA", "MRE", "MRH", "MRR", "WDG" ] }, 
+      "34674": { "brands": [ "MDG", "MOJ", "MRE", "PDS" ] }, 
+      "34667": { "brands": [ "MDG", "MOJ", "MRE", "PDS" ] }, 
+      "33524": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33540": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33541": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33559": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "33572": { "brands": [ "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33575": { "brands": [ "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33586": { "brands": [ "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33594": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33595": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33603": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33619": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33621": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33686": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33730": { "brands": [ "MDG", "MLY", "MRH", "PDS" ] }, 
+      "34249": { "brands": [ "MDG", "MLY", "MRH" ] }, 
+      "33523": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33530": { "brands": [ "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33537": { "brands": [ "MDG", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33542": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33574": { "brands": [ "MDG", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33587": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33601": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33602": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33617": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33622": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33646": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "33647": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "33684": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33687": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "34681": { "brands": [ "MDG", "MLY", "PDS" ] }, 
+      "33525": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33527": { "brands": [ "MDG", "MLY", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33576": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33598": { "brands": [ "MDG", "MLY", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33660": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33673": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33675": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33681": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "34639": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33503": { "brands": [ "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33510": { "brands": [ "MDG", "MLY", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33566": { "brands": [ "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33570": { "brands": [ "MDG", "MLY", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33609": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33611": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33677": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33679": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "34669": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "PDS" ] }, 
+      "34679": { "brands": [ "MDG", "MRE", "PDS" ] }, 
+      "33508": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "33534": { "brands": [ "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33539": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33544": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33564": { "brands": [ "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33579": { "brands": [ "MDG", "MLY", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33592": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33607": { "brands": [ "MDG", "MLY", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33620": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33650": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33672": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33689": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33509": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "33511": { "brands": [ "MDG", "MLY", "MLY", "MOJ", "MRE", "MRE", "MRH", "PDS" ] }, 
+      "33543": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33545": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33563": { "brands": [ "MDG", "MLY", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33565": { "brands": [ "MDG", "MLY", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33571": { "brands": [ "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33584": { "brands": [ "MDG", "MLY", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33604": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33606": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33614": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33616": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33633": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33567": { "brands": [ "MDG", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33608": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33610": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33629": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33631": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33637": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33655": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33664": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33680": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33526": { "brands": [ "MDG", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33573": { "brands": [ "MDG", "MLY", "MLY", "MOJ", "MRH", "PDS" ] }, 
+      "33583": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33593": { "brands": [ "MDG", "MOJ", "MRE", "MRH", "PDS" ] }, 
+      "33605": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33623": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33630": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33674": { "brands": [ "MDG", "MLY", "MOJ", "MRE", "MRE", "MRH", "MRR", "PDS" ] }, 
+      "33810": { "brands": [ "MLY" ] }, 
+      "33550": { "brands": [ "MLY", "MRH", "MRR" ] }, 
+      "33809": { "brands": [ "MLY" ] }, 
+      "33849": { "brands": [ "MLY" ] }, 
+      "33860": { "brands": [ "MLY" ] }, 
+      "33662": { "brands": [ "MOJ", "MRH", "MRR" ] }, 
+      "33663": { "brands": [ "MOJ", "MRH", "MRR" ] },
+
+      "37077": { "brands": ["ASV", "MDG", "MRA", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37167": { "brands": ["ASV", "MDG", "MRE", "MRH", "DVW", "FSP", "SHG"]},
+      "37227": { "brands": ["ASV", "MDG", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37014": { "brands": ["ASV", "MDG", "MRE", "MLY", "FSP", "SHG"]},
+      "37082": { "brands": ["ASV", "MDG", "MRH", "MLY", "SHG"]},
+      "37070": { "brands": ["ASV", "MDG", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37122": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37214": { "brands": ["ASV", "MDG", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37129": { "brands": ["ASV", "MDG", "MRE", "MRH", "DVW", "MLY", "FSP", "SHG"]},
+      "37215": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "WDG", "SHG"]},
+      "37220": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "WDG", "FSP", "SHG"]},
+      "37024": { "brands": ["ASV", "MDG", "MRA", "MRE", "MLY", "WDG", "SHG"]},
+      "37065": { "brands": ["ASV", "MDG", "MRA", "MRE", "MLY", "WDG", "SHG"]},
+      "37068": { "brands": ["ASV", "MDG", "MRA", "MRE", "MLY", "WDG", "SHG"]},
+      "37072": { "brands": ["ASV", "MDG", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37229": { "brands": ["ASV", "MDG", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37062": { "brands": ["ASV", "MDG", "MLY", "SHG"]},
+      "37152": { "brands": ["ASV", "MDG", "MRH", "MLY", "FSP", "SHG"]},
+      "37064": { "brands": ["ASV", "MDG", "MRA", "MRE", "MLY", "WDG", "SHG"]},
+      "37069": { "brands": ["ASV", "MDG", "MRA", "MRE", "MLY", "WDG", "SHG"]},
+      "37075": { "brands": ["ASV", "MDG", "MRA", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37076": { "brands": ["ASV", "MDG", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37121": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37067": { "brands": ["ASV", "MDG", "MRA", "MRE", "MLY", "WDG", "SHG"]},
+      "37071": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37073": { "brands": ["ASV", "MDG", "MLY", "SHG"]},
+      "37205": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "WDG", "SHG"]},
+      "37027": { "brands": ["ASV", "MDG", "MRA", "MRE", "MLY", "WDG", "SHG"]},
+      "37138": { "brands": ["ASV", "MDG", "MRA", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37221": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "WDG", "SHG"]},
+      "37032": { "brands": ["ASV", "MDG", "MLY"]},
+      "37035": { "brands": ["ASV", "MDG", "MLY", "SHG"]},
+      "37010": { "brands": ["ASV", "MDG", "MLY"]},
+      "37146": { "brands": ["ASV", "MDG", "MLY", "SHG"]},
+      "37040": { "brands": ["ASV", "MRR", "MLY"]},
+      "37172": { "brands": ["ASV", "MDG", "MLY"]},
+      "37041": { "brands": ["ASV", "MRR", "MLY"]},
+      "37042": { "brands": ["ASV", "MRR", "MLY"]},
+      "37043": { "brands": ["ASV", "MRR", "MLY"]},
+      "37037": { "brands": ["MDG", "MRE", "DVW", "SHG"]},
+      "37130": { "brands": ["MDG", "MRE", "MRH", "DVW", "SHG"]},
+      "37149": { "brands": ["MDG", "MRE", "DVW"]},
+      "37131": { "brands": ["MDG", "MRE", "MRH", "DVW"]},
+      "37118": { "brands": ["MDG", "MRE", "DVW", "MLY"]},
+      "37016": { "brands": ["MDG", "DVW", "MLY"]},
+      "37020": { "brands": ["MDG", "DVW", "SHG"]},
+      "37128": { "brands": ["MDG", "MRE", "MRH", "DVW", "FSP", "SHG"]},
+      "38402": { "brands": ["MRE", "DVW", "MLY"]},
+      "37127": { "brands": ["MDG", "MRE", "MRH", "DVW", "FSP", "SHG"]},
+      "37060": { "brands": ["MDG", "MRE", "DVW", "MLY", "SHG"]},
+      "37095": { "brands": ["MRA", "DVW", "MLY"]},
+      "37153": { "brands": ["MDG", "MRE", "DVW", "SHG"]},
+      "37174": { "brands": ["MRE", "DVW", "MLY"]},
+      "38401": { "brands": ["MRE", "DVW", "MLY"]},
+      "37086": { "brands": ["MDG", "MRA", "MRE", "MRH", "DVW", "MLY", "SHG"]},
+      "37085": { "brands": ["MDG", "MRE", "MRH", "DVW", "MLY", "SHG"]},
+      "37132": { "brands": ["MRE", "MRH", "DVW"]},
+      "37133": { "brands": ["MDG", "MRE", "MRH", "DVW", "SHG"]},
+      "37063": { "brands": ["MDG", "DVW", "SHG"]},
+      "37246": { "brands": ["MDG", "MRE", "MRH", "MLY", "FSP"]},
+      "37234": { "brands": ["MDG", "MRE", "MRH", "MLY", "FSP"]},
+      "37242": { "brands": ["MDG", "MRE", "MRH", "MLY", "FSP", "SHG"]},
+      "37066": { "brands": ["MDG", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37232": { "brands": ["MDG", "MRH", "MLY", "FSP", "GUY"]},
+      "37243": { "brands": ["MDG", "MRE", "MRH", "MLY", "FSP", "SHG"]},
+      "37135": { "brands": ["MDG", "MRA", "MRE", "MLY", "FSP", "SHG"]},
+      "37046": { "brands": ["MDG", "MRE", "MLY", "SHG"]},
+      "37048": { "brands": ["MDG", "MLY", "SHG"]},
+      "37136": { "brands": ["MDG", "MRE", "MRH", "MLY", "SHG"]},
+      "37080": { "brands": ["MDG", "MRH", "MLY", "SHG"]},
+      "37116": { "brands": ["MDG", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37184": { "brands": ["MDG", "MRE", "MLY"]},
+      "37207": { "brands": ["MDG", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37211": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "WDG", "GUY", "SHG"]},
+      "37213": { "brands": ["MDG", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37241": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37031": { "brands": ["MDG", "MRH", "MLY"]},
+      "37206": { "brands": ["MDG", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37222": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "WDG", "GUY", "SHG"]},
+      "37143": { "brands": ["MDG", "MRH", "MRR", "MLY", "SHG"]},
+      "37187": { "brands": ["MDG", "MRH", "MLY", "SHG"]},
+      "37210": { "brands": ["MDG", "MRA", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37230": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37087": { "brands": ["MDG", "MRE", "MRH", "MLY", "SHG"]},
+      "37088": { "brands": ["MDG", "MRE", "MRH", "MLY", "SHG"]},
+      "37115": { "brands": ["MDG", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37189": { "brands": ["MDG", "MRH", "MRR", "MLY", "SHG"]},
+      "37208": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37219": { "brands": ["MDG", "MRE", "MRH", "MLY", "FSP", "SHG"]},
+      "37224": { "brands": ["MDG", "MRA", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37240": { "brands": ["MDG", "MRH", "MLY", "GUY"]},
+      "37011": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "GUY", "SHG"]},
+      "37013": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "GUY", "SHG"]},
+      "37015": { "brands": ["MDG", "MRH", "MLY", "SHG"]},
+      "37202": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37204": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "WDG", "FSP", "GUY", "SHG"]},
+      "37212": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "WDG", "FSP", "GUY", "SHG"]},
+      "37218": { "brands": ["MDG", "MRH", "MLY", "SHG"]},
+      "37235": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37179": { "brands": ["MDG", "MRE", "MLY", "SHG"]},
+      "37216": { "brands": ["MDG", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37090": { "brands": ["MDG", "MRE", "MRH", "MLY", "SHG"]},
+      "37201": { "brands": ["MDG", "MRE", "MRH", "MLY", "FSP", "SHG"]},
+      "37203": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37217": { "brands": ["MDG", "MRE", "MRH", "MRR", "MLY", "SHG"]},
+      "37236": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "SHG"]},
+      "37238": { "brands": ["MDG", "MRH", "MLY"]},
+      "37188": { "brands": ["MDG", "MLY", "SHG"]},
+      "37209": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "WDG", "SHG"]},
+      "37228": { "brands": ["MDG", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37244": { "brands": ["MDG", "MRA", "MRE", "MRH", "MRR", "MLY", "FSP", "SHG"]},
+      "37250": { "brands": ["MDG", "MRA", "MRH", "MLY", "FSP", "SHG"]},
+      
+      "37012": { "brands": ["MRA", "MRE", "MLY"]},
+      "38004": { "brands": ["PDS", "FSP", "SHG", "MRR", "MDG", "MRE", "ASV"]},
+      "38049": { "brands": ["PDS", "SHG", "MRR", "MDG", "MRE", "ASV"]},
+      "38055": { "brands": ["PDS", "FSP", "MRR", "MDG", "MRE", "ASV"]},
+      "38083": { "brands": ["PDS", "FSP", "MRR", "MDG", "MRE", "ASV"]},
+      "38058": { "brands": ["PDS", "MRR", "MDG", "MRE", "ASV"]},
+      "38069": { "brands": ["PDS", "MRE", "ASV", "MRR"]},
+      "38011": { "brands": ["PDS", "SHG", "MRR", "MDG", "MRE", "ASV"]},
+      "38023": { "brands": ["PDS", "ASV", "MRR", "MDG"]},
+      "38010": { "brands": ["PDS", "SHG", "MRR", "MDG", "MRE", "ASV"]},
+      "38019": { "brands": ["PDS", "MRR", "MDG", "MRE", "ASV"]},
+      "38015": { "brands": ["PDS", "ASV", "MRR", "MDG"]},
+      "38053": { "brands": ["PDS", "FSP", "SHG", "MRR", "MDG", "MRE", "ASV"]},
+      "38071": { "brands": ["PDS", "FSP", "MRR", "MDG", "MRE", "ASV"]},
+      "38016": { "brands": ["MRH", "PDS", "FSP", "MRR", "SHG", "MLY", "MRA", "MDG", "ASV", "JUK"]},
+      "38018": { "brands": ["MRH", "PDS", "FSP", "MRR", "SHG", "MLY", "MRA", "MDG", "MRE", "ASV", "JUK", "WDG"]},
+      "38108": { "brands": ["PDS", "MRR", "MDG", "ASV", "JUK"]},
+      "38111": { "brands": ["PDS", "SHG", "MRR", "MDG", "ASV", "JUK"]},
+      "38137": { "brands": ["MRH", "PDS", "MRR", "MLY", "MRA", "MDG", "ASV", "JUK", "DVW"]},
+      "38139": { "brands": ["MRH", "PDS", "FSP", "MRR", "SHG", "MLY", "MRA", "MDG", "MRE", "ASV", "JUK", "WDG", "DVW"]},
+      "38182": { "brands": ["PDS", "MRR", "MDG", "ASV", "JUK"]},
+      "38166": { "brands": ["MRH", "PDS", "FSP", "MRR", "MLY", "MRA", "MDG", "ASV", "JUK", "WDG", "DVW"]},
+      "38183": { "brands": ["MRH", "PDS", "FSP", "MRR", "MLY", "MRA", "MDG", "MRE", "ASV", "JUK", "WDG", "DVW"]},
+      "38122": { "brands": ["PDS", "MRR", "MLY", "MDG", "ASV", "JUK"]},
+      "38133": { "brands": ["MRH", "PDS", "FSP", "MRR", "SHG", "MLY", "MRA", "MDG", "ASV", "JUK"]},
+      "38128": { "brands": ["DVW", "PDS", "ASV", "MRR", "MLY", "MDG"]},
+      "38157": { "brands": ["MRH", "PDS", "MRR", "MLY", "MRA", "MDG", "ASV", "JUK", "DVW"]},
+      "38088": { "brands": ["MRH", "PDS", "FSP", "MRR", "MLY", "MRA", "MDG", "MRE", "ASV", "JUK", "WDG"]},
+      "38029": { "brands": ["MRH", "PDS", "SHG", "MRR", "MLY", "MRA", "MDG", "ASV", "JUK"]},
+      "38119": { "brands": ["MRH", "PDS", "FSP", "MRR", "SHG", "MLY", "MRA", "MDG", "ASV", "JUK", "WDG", "DVW"]},
+      "38120": { "brands": ["MRH", "PDS", "FSP", "MRR", "SHG", "MLY", "MRA", "MDG", "ASV", "JUK", "WDG", "DVW"]},
+      "38168": { "brands": ["PDS", "MRR", "MLY", "MDG", "ASV", "JUK"]},
+      "38193": { "brands": ["PDS", "MRR", "MLY", "MDG", "ASV", "DVW"]},
+      "38014": { "brands": ["MRH", "PDS", "FSP", "MRR", "SHG", "MLY", "MRA", "MDG", "MRE", "ASV", "JUK", "WDG"]},
+      "38115": { "brands": ["PDS", "MRR", "MLY", "MDG", "ASV", "DVW"]},
+      "38141": { "brands": ["DVW", "PDS", "ASV", "MRR", "MLY", "MDG"]},
+      "38174": { "brands": ["PDS", "MRR", "MDG", "ASV", "JUK"]},
+      "38112": { "brands": ["PDS", "MRR", "MDG", "ASV", "JUK"]},
+      "38117": { "brands": ["MRH", "PDS", "SHG", "MRR", "MLY", "MRA", "MDG", "ASV", "JUK", "DVW"]},
+      "38138": { "brands": ["MRH", "PDS", "FSP", "MRR", "SHG", "MLY", "MRA", "MDG", "MRE", "ASV", "JUK", "WDG", "DVW"]},
+      "38175": { "brands": ["PDS", "MRR", "MLY", "MDG", "ASV", "DVW"]},
+      "38187": { "brands": ["MRH", "PDS", "FSP", "MRR", "MLY", "MRA", "MDG", "ASV", "JUK", "WDG", "DVW"]},
+      "38002": { "brands": ["MRH", "PDS", "FSP", "MRR", "SHG", "MLY", "MRA", "MDG", "MRE", "ASV", "JUK", "WDG"]},
+      "38036": { "brands": ["MRH", "PDS", "FSP", "MRR", "SHG", "MLY", "MRA", "MDG", "MRE", "ASV", "JUK", "WDG"]},
+      "38104": { "brands": ["PDS", "MRR", "MDG", "ASV", "JUK"]},
+      "38124": { "brands": ["MRH", "PDS", "MRR", "MLY", "MRA", "MDG", "ASV", "JUK", "DVW"]},
+      "38134": { "brands": ["MRH", "PDS", "SHG", "MRR", "MLY", "MRA", "MDG", "ASV", "JUK"]},
+      "38135": { "brands": ["MRH", "PDS", "SHG", "MRR", "MLY", "MRA", "MDG", "ASV", "JUK"]},
+      "38177": { "brands": ["MRH", "PDS", "MRR", "MLY", "MRA", "MDG", "ASV", "JUK", "DVW"]},
+      "38184": { "brands": ["MRH", "PDS", "MRR", "MLY", "MRA", "MDG", "ASV", "JUK"]},
+      "38672": { "brands": ["PDS", "SHG", "MRR", "MDG", "ASV", "MOJ"]},
+      "38671": { "brands": ["PDS", "SHG", "MRR", "MDG", "ASV", "MOJ"]},
+      "38654": { "brands": ["PDS", "SHG", "MRR", "MDG", "ASV", "MOJ"]},
+      "38125": { "brands": ["PDS", "MRH", "SHG", "MRR", "MLY", "MRA", "MDG", "WDG", "DVW"]},
+      "38188": { "brands": ["PDS", "MRH", "MRR", "MLY", "MDG", "JUK", "WDG", "DVW"]},
+      "38194": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38651": { "brands": ["SHG", "PDS", "MRR", "MDG", "MOJ"]},
+      "38680": { "brands": ["SHG", "PDS", "MRR", "MDG", "MOJ"]},
+      "38027": { "brands": ["MRH", "PDS", "MRR", "MLY", "MRA", "MDG", "MRE", "JUK", "WDG"]},
+      "38054": { "brands": ["MRE", "PDS", "MRR", "MDG"]},
+      "38103": { "brands": ["SHG", "PDS", "MRR", "MDG", "JUK"]},
+      "38106": { "brands": ["PDS", "MRR", "MDG"]},
+      "38132": { "brands": ["PDS", "MRR", "MDG"]},
+      "38152": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "37544": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38066": { "brands": ["SHG", "PDS", "MRR", "MDG", "JUK"]},
+      "38105": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38686": { "brands": ["SHG", "PDS", "MRR", "MDG", "MOJ"]},
+      "38017": { "brands": ["MRH", "PDS", "SHG", "MRR", "MLY", "MRA", "MDG", "MRE", "JUK", "WDG"]},
+      "38068": { "brands": ["SHG", "PDS", "MRR", "MDG", "MRE"]},
+      "38109": { "brands": ["PDS", "MRR", "MDG"]},
+      "38136": { "brands": ["PDS", "MRR", "MDG"]},
+      "38151": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38161": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38173": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38611": { "brands": ["SHG", "PDS", "MDG", "MOJ"]},
+      "37501": { "brands": ["PDS", "MRR", "MDG"]},
+      "38028": { "brands": ["MRH", "PDS", "SHG", "MRR", "MLY", "MRA", "MDG", "MRE", "JUK", "WDG"]},
+      "38101": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38114": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38130": { "brands": ["PDS", "MRR", "MDG"]},
+      "38159": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38632": { "brands": ["SHG", "PDS", "MRR", "MDG", "MOJ"]},
+      "38641": { "brands": ["SHG", "PDS", "MRR", "MDG", "MOJ"]},
+      "38107": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38127": { "brands": ["PDS", "MRR", "MDG"]},
+      "38131": { "brands": ["PDS", "MRR", "MDG"]},
+      "38148": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38181": { "brands": ["PDS", "MRR", "MDG"]},
+      "38057": { "brands": ["SHG", "PDS", "MRR", "MDG"]},
+      "38060": { "brands": ["SHG", "PDS", "MRR", "MDG"]},
+      "38076": { "brands": ["SHG", "PDS", "MRR", "MDG"]},
+      "38118": { "brands": ["PDS", "MRR", "MDG"]},
+      "38126": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38145": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38150": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38167": { "brands": ["PDS", "MRR", "MDG"]},
+      "38637": { "brands": ["SHG", "PDS", "MRR", "MDG", "MOJ"]},
+      "38048": { "brands": ["SHG", "PDS", "MRR", "MDG"]},
+      "38116": { "brands": ["PDS", "MRR", "MDG"]},
+      "38163": { "brands": ["PDS", "MRR", "MDG", "JUK"]},
+      "38045": { "brands": ["MRE", "PDS", "MRR", "MDG"]},
+      "38113": { "brands": ["PDS", "MRR", "MDG"]},
+      "38186": { "brands": ["PDS", "MRR", "MDG"]},
+      "38190": { "brands": ["PDS", "MRR", "MDG"]},
+      "38197": { "brands": ["MRR", "JUK", "WDG"]},
+      "40385": { "brands": ["ASV", "MRE", "PDS"]},
+      "40404": { "brands": ["ASV", "MRE", "MRR", "PDS"]},
+      "40508": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG"]},
+      "40512": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40523": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG"]},
+      "40555": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40476": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRR", "PDS", "MOJ"]},
+      "40503": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG", "GUY"]},
+      "40515": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG"]},
+      "40544": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG", "GUY"]},
+      "40575": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40620": { "brands": ["ASV", "MDG", "MRR", "PDS", "MOJ"]},
+      "40622": { "brands": ["ASV", "MDG", "MRR", "PDS", "MOJ"]},
+      "40546": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40577": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40579": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40580": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40619": { "brands": ["ASV", "MDG", "MRR", "PDS", "MOJ"]},
+      "40383": { "brands": ["ASV", "MDG", "MRE", "MRR", "PDS", "MLY", "MOJ"]},
+      "40384": { "brands": ["ASV", "MDG", "MRE", "MRR", "PDS", "MLY", "MOJ"]},
+      "40405": { "brands": ["ASV", "MRE", "MRR", "PDS"]},
+      "40509": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG", "GUY"]},
+      "40513": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG", "GUY"]},
+      "40522": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG"]},
+      "40598": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40603": { "brands": ["ASV", "MDG", "MRR", "PDS", "MOJ"]},
+      "40550": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40581": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40588": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG"]},
+      "40618": { "brands": ["ASV", "MDG", "MRR", "PDS", "MOJ"]},
+      "40505": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40517": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG"]},
+      "40526": { "brands": ["ASV", "MDG", "MRE", "MRH", "MRR", "PDS", "MLY"]},
+      "40536": { "brands": ["ASV", "MDG", "MRE", "MRH", "MRR", "PDS", "MLY"]},
+      "40403": { "brands": ["ASV", "MRE", "MRR", "PDS"]},
+      "40461": { "brands": ["ASV", "MRA", "MRE", "PDS"]},
+      "40504": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG", "GUY"]},
+      "40506": { "brands": ["ASV", "MDG", "MRE", "MRH", "MRR", "PDS", "MLY"]},
+      "40510": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG", "GUY"]},
+      "40516": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40533": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG", "GUY"]},
+      "40583": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40604": { "brands": ["ASV", "MRR", "PDS", "MOJ"]},
+      "40347": { "brands": ["ASV", "MDG", "MRE", "MRR", "PDS", "MLY", "MOJ"]},
+      "40507": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG"]},
+      "40511": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40524": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG"]},
+      "40578": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40582": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40602": { "brands": ["ASV", "MDG", "MRR", "PDS", "MOJ"]},
+      "40475": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRR", "PDS", "MOJ"]},
+      "40502": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG"]},
+      "40514": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG"]},
+      "40574": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40576": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "GUY"]},
+      "40591": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRH", "MRR", "PDS", "MLY", "MOJ", "WDG", "GUY"]},
+      "40621": { "brands": ["ASV", "MDG", "MRR", "PDS", "MOJ"]},
+      "40324": { "brands": ["MDG", "MRR", "PDS", "MLY", "MOJ"]},
+      "40342": { "brands": ["PDS", "MLY", "MOJ"]},
+      "40356": { "brands": ["MDG", "MRA", "MRE", "MRR", "PDS", "MOJ"]},
+      "40390": { "brands": ["MRE", "PDS", "MOJ"]},
+      "40340": { "brands": ["MDG", "MRA", "MRE", "MRR", "PDS", "MOJ"]},
+      "40391": { "brands": ["MRA", "MRR", "PDS", "MOJ"]},
+      "40392": { "brands": ["MRA", "MRR", "PDS", "MOJ"]},
+      "40361": { "brands": ["MRA", "MRR", "MOJ"]},
+      "40362": { "brands": ["MRA", "MRR", "MOJ"]},
+      "40422": { "brands": ["MRA", "MRE", "PDS"]},
+      "40444": { "brands": ["MRA", "MRE", "PDS"]},
+      "40423": { "brands": ["MRA", "MRE", "PDS"]},
+      "40410": { "brands": ["MRA", "MRE", "PDS"]},
+      "57020": { "brands": ["ASV", "MDG", "MRA", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57032": { "brands": ["ASV", "MDG", "MRA", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57064": { "brands": ["ASV", "MDG", "MRA", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57193": { "brands": ["ASV", "MDG", "MRA", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57014": { "brands": ["ASV", "PDS", "MLY", "FSP", "HMS", "RBW"]},
+      "57041": { "brands": ["ASV", "MDG", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57117": { "brands": ["ASV", "MDG", "MRA", "MRR", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57053": { "brands": ["ASV", "MDG", "PDS", "MLY", "FSP", "HMS", "RBW"]},
+      "57068": { "brands": ["ASV", "MDG", "MRA", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57077": { "brands": ["ASV", "MDG", "MRA", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57105": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRR", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57106": { "brands": ["ASV", "MDG", "MRA", "MRE", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57104": { "brands": ["ASV", "MDG", "MRA", "MRR", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57107": { "brands": ["ASV", "MDG", "MRA", "MRR", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57197": { "brands": ["ASV", "MDG", "MRE", "MLY", "RBW"]},
+      "57005": { "brands": ["ASV", "MDG", "MRA", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57055": { "brands": ["ASV", "MDG", "MRA", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57103": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRR", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57108": { "brands": ["ASV", "MDG", "MRA", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57118": { "brands": ["ASV", "MDG", "MRA", "MRR", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57198": { "brands": ["ASV", "MDG", "MRA", "MRR", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57101": { "brands": ["ASV", "MDG", "MRA", "MRR", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57015": { "brands": ["ASV", "MDG", "MRA", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57027": { "brands": ["ASV", "MDG", "PDS", "HMS", "RBW"]},
+      "57039": { "brands": ["ASV", "MDG", "MRA", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57109": { "brands": ["ASV", "MDG", "MRA", "MRE", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57110": { "brands": ["ASV", "MDG", "MRA", "MRE", "MRR", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57016": { "brands": ["ASV", "HMS", "RBW"]},
+      "57018": { "brands": ["ASV", "MDG", "PDS", "MLY", "FSP", "HMS", "RBW"]},
+      "57033": { "brands": ["ASV", "MDG", "MRA", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57048": { "brands": ["ASV", "MDG", "HMS", "RBW"]},
+      "57013": { "brands": ["ASV", "MDG", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57035": { "brands": ["ASV", "MDG", "PDS", "MLY", "FSP", "HMS", "RBW"]},
+      "57186": { "brands": ["ASV", "MDG", "MRA", "MRR", "PDS", "MLY", "WDG", "FSP", "HMS", "RBW"]},
+      "57003": { "brands": ["ASV", "MDG", "PDS", "MLY", "FSP", "HMS", "RBW"]},
+      "57022": { "brands": ["ASV", "MDG", "PDS", "MLY", "FSP", "HMS", "RBW"]},
+      "57030": { "brands": ["ASV", "MDG", "PDS", "MLY", "FSP", "HMS", "RBW"]},
+      "57021": { "brands": ["PDS", "MLY", "FSP", "HMS", "RBW"]},
+      "57036": { "brands": ["PDS", "MLY", "FSP", "HMS"]},
+      "57070": { "brands": ["PDS", "MLY", "FSP", "HMS"]},
+      "57043": { "brands": ["PDS", "MLY", "HMS"]}
+    }
+
+    addEventListener('DOMContentLoaded', (event) => {
+            
+      const brands = document.querySelector('.brands')
+      const professionals = document.querySelector('.professionals')
+      const headline = document.querySelector('#headline')
+      const link = document.querySelector('#link')
+      
+      const main = document.querySelector('main');
+      
+      let qs = new URLSearchParams(window.location.search);
+      let campaign_name = qs.get('CAMPAIGN_NAME');
+      let zipcode = qs.get('ZIPCODE');
+      
+      let arr = campaign_name.split('_')
+      
+      let category = arr[0].toLowerCase()
+      let location = arr[arr.length-1].toLowerCase()
+
+      switch(category) {
+        case 'general':
+          headline.src = 'https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/headline/general.svg'
+        break
+        case 'maintain':
+          headline.src = 'https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/headline/maintain.svg'
+        break
+        case 'repair':
+          headline.src = 'https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/headline/repair.svg'
+        break
+        case 'enhance':
+          headline.src = 'https://dlyyrzii9sh86.cloudfront.net/Neighborly_DCO/assets/headline/enhance.svg'
+        break
+      }
+
+      if(zipcode) {
+
+        brands.innerHTML = ''
+        professionals.innerHTML = ''
+
+        if(data[zipcode].brands.length) {
+
+          const shuffled = data[zipcode].brands.sort(() => 0.5 - Math.random());
+          let selected_brands = shuffled.slice(0, 3);
+
+          for(i in selected_brands) {
+            let brand_img = document.createElement('img')
+                brand_img.src = 'https://dlyyrzii9sh86.cloudfront.net/t/neighborly/logo/' + selected_brands[i].toLowerCase() + '.png'
+                brands.appendChild(brand_img)
+
+            let pro_img = document.createElement('img')
+                pro_img.src = 'https://dlyyrzii9sh86.cloudfront.net/t/neighborly/pros/' + selected_brands[i].toLowerCase() + '.png'
+                professionals.appendChild(pro_img)     
+          }
+
+          let utm_brands = selected_brands.join('_').toUpperCase()
+              link.href = `https://hub.neighborly.com/${location}/?tm_source=Moroch&utm_medium=Display_Video&utm_campaign=Heros&zipcode=${zipcode}&brands=${utm_brands}`
+          }
+        }
+    });
+  </script>
+</body>
+</html>
+

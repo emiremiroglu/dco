@@ -1,0 +1,137 @@
+<!-- From https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>MapBox5</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css" rel="stylesheet">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="fixed top-0 left-0 bg-white w-full p-3 z-50">
+    <select id="campaign_select" class="p-3 w-full rounded-md border-0 bg-zinc-100">
+    </select>
+  </header>
+  <main id="map"></main>
+  <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
+  <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+  <script>
+    
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZW1pcmVtaXJvZ2x1IiwiYSI6ImNqYTcza282ZzduZzcycXBocnEyNTB6OXAifQ.2Ml_FS7DKpSZMZkUqFFcsA';
+    
+    let campaign_select = document.querySelector('#campaign_select')
+    let mapboxClient = mapboxSdk({ accessToken: mapboxgl.accessToken });
+
+    let locations = [];
+
+    let campaigns = [
+      { "label": "AWARENESS_CTV/OTT_Siuox Falls", "data": [ { "zipcode": 57104, "impressions": 9.884, "unique_impressions": 1.577 }, { "zipcode": 57103, "impressions": 13.939, "unique_impressions": 2.147 }, { "zipcode": 57105, "impressions": 6.592, "unique_impressions": 1.132 }, { "zipcode": 57110, "impressions": 6.475, "unique_impressions": 999 }, { "zipcode": 57117, "impressions": 8, "unique_impressions": 1 }, { "zipcode": 57107, "impressions": 4.143, "unique_impressions": 645 } ] },
+      { "label": "AWARENESS_DOOH_Sioux Falls", "data": [ { "zipcode": 57015, "impressions": 344, "unique_impressions": 0 }, { "zipcode": 57104, "impressions": 1.537, "unique_impressions": 0 }, { "zipcode": 57401, "impressions": 3.227, "unique_impressions": 0 }, { "zipcode": 57579, "impressions": 120, "unique_impressions": 0 }, { "zipcode": 57026, "impressions": 12, "unique_impressions": 0 }, { "zipcode": 57103, "impressions": 1.113, "unique_impressions": 0 }, { "zipcode": 57532, "impressions": 426, "unique_impressions": 0 }, { "zipcode": 57311, "impressions": 11, "unique_impressions": 0 }, { "zipcode": 57528, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57580, "impressions": 103, "unique_impressions": 0 }, { "zipcode": 57438, "impressions": 25, "unique_impressions": 0 }, { "zipcode": 57544, "impressions": 36, "unique_impressions": 0 }, { "zipcode": 57564, "impressions": 72, "unique_impressions": 0 }, { "zipcode": 57022, "impressions": 56, "unique_impressions": 0 }, { "zipcode": 57226, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57559, "impressions": 21, "unique_impressions": 0 }, { "zipcode": 57105, "impressions": 416, "unique_impressions": 0 }, { "zipcode": 57033, "impressions": 96, "unique_impressions": 0 }, { "zipcode": 57262, "impressions": 28, "unique_impressions": 0 }, { "zipcode": 57428, "impressions": 12, "unique_impressions": 0 }, { "zipcode": 57201, "impressions": 3.274, "unique_impressions": 0 }, { "zipcode": 57450, "impressions": 24, "unique_impressions": 0 }, { "zipcode": 57269, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57332, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57012, "impressions": 99, "unique_impressions": 0 }, { "zipcode": 57237, "impressions": 12, "unique_impressions": 0 }, { "zipcode": 57648, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57013, "impressions": 587, "unique_impressions": 0 }, { "zipcode": 57110, "impressions": 2.893, "unique_impressions": 0 }, { "zipcode": 57232, "impressions": 16, "unique_impressions": 0 }, { "zipcode": 57356, "impressions": 10, "unique_impressions": 0 }, { "zipcode": 57117, "impressions": 1, "unique_impressions": 0 }, { "zipcode": 57261, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57469, "impressions": 82, "unique_impressions": 0 }, { "zipcode": 57323, "impressions": 1, "unique_impressions": 0 }, { "zipcode": 57029, "impressions": 335, "unique_impressions": 0 }, { "zipcode": 57070, "impressions": 1, "unique_impressions": 0 }, { "zipcode": 57325, "impressions": 360, "unique_impressions": 0 }, { "zipcode": 57432, "impressions": 15, "unique_impressions": 0 }, { "zipcode": 57005, "impressions": 24, "unique_impressions": 0 }, { "zipcode": 57383, "impressions": 12, "unique_impressions": 0 }, { "zipcode": 57420, "impressions": 5, "unique_impressions": 0 }, { "zipcode": 57035, "impressions": 278, "unique_impressions": 0 }, { "zipcode": 57274, "impressions": 24, "unique_impressions": 0 }, { "zipcode": 57276, "impressions": 18, "unique_impressions": 0 }, { "zipcode": 57569, "impressions": 196, "unique_impressions": 0 }, { "zipcode": 57366, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57268, "impressions": 30, "unique_impressions": 0 }, { "zipcode": 57533, "impressions": 24, "unique_impressions": 0 }, { "zipcode": 57430, "impressions": 18, "unique_impressions": 0 }, { "zipcode": 57030, "impressions": 17, "unique_impressions": 0 }, { "zipcode": 57314, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57385, "impressions": 26, "unique_impressions": 0 }, { "zipcode": 57054, "impressions": 25, "unique_impressions": 0 }, { "zipcode": 57065, "impressions": 3, "unique_impressions": 0 }, { "zipcode": 57055, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57077, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57315, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57247, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57384, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57006, "impressions": 1.368, "unique_impressions": 0 }, { "zipcode": 57066, "impressions": 24, "unique_impressions": 0 }, { "zipcode": 57266, "impressions": 10, "unique_impressions": 0 }, { "zipcode": 57260, "impressions": 12, "unique_impressions": 0 }, { "zipcode": 57078, "impressions": 496, "unique_impressions": 0 }, { "zipcode": 57106, "impressions": 7.829, "unique_impressions": 0 }, { "zipcode": 57042, "impressions": 32, "unique_impressions": 0 }, { "zipcode": 57063, "impressions": 430, "unique_impressions": 0 }, { "zipcode": 57069, "impressions": 546, "unique_impressions": 0 }, { "zipcode": 57107, "impressions": 346, "unique_impressions": 0 }, { "zipcode": 57601, "impressions": 140, "unique_impressions": 0 }, { "zipcode": 57053, "impressions": 24, "unique_impressions": 0 }, { "zipcode": 57059, "impressions": 382, "unique_impressions": 0 }, { "zipcode": 57108, "impressions": 2.555, "unique_impressions": 0 }, { "zipcode": 57064, "impressions": 118, "unique_impressions": 0 }, { "zipcode": 57350, "impressions": 270, "unique_impressions": 0 }, { "zipcode": 57239, "impressions": 26, "unique_impressions": 0 }, { "zipcode": 57270, "impressions": 12, "unique_impressions": 0 }, { "zipcode": 57335, "impressions": 12, "unique_impressions": 0 }, { "zipcode": 57345, "impressions": 12, "unique_impressions": 0 }, { "zipcode": 57355, "impressions": 12, "unique_impressions": 0 }, { "zipcode": 57062, "impressions": 30, "unique_impressions": 0 }, { "zipcode": 57234, "impressions": 144, "unique_impressions": 0 }, { "zipcode": 57235, "impressions": 151, "unique_impressions": 0 }, { "zipcode": 57252, "impressions": 75, "unique_impressions": 0 }, { "zipcode": 57279, "impressions": 15, "unique_impressions": 0 }, { "zipcode": 57328, "impressions": 81, "unique_impressions": 0 }, { "zipcode": 57451, "impressions": 535, "unique_impressions": 0 }, { "zipcode": 57625, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57045, "impressions": 22, "unique_impressions": 0 }, { "zipcode": 57382, "impressions": 12, "unique_impressions": 0 }, { "zipcode": 57036, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57040, "impressions": 6, "unique_impressions": 0 }, { "zipcode": 57301, "impressions": 559, "unique_impressions": 0 }, { "zipcode": 57523, "impressions": 12, "unique_impressions": 0 }, { "zipcode": 57058, "impressions": 200, "unique_impressions": 0 }, { "zipcode": 57273, "impressions": 72, "unique_impressions": 0 }, { "zipcode": 57568, "impressions": 222, "unique_impressions": 0 }, { "zipcode": 57555, "impressions": 18, "unique_impressions": 0 }, { "zipcode": 57003, "impressions": 12, "unique_impressions": 0 }, { "zipcode": 57445, "impressions": 5, "unique_impressions": 0 }, { "zipcode": 57501, "impressions": 691, "unique_impressions": 0 }, { "zipcode": 57032, "impressions": 108, "unique_impressions": 0 }, { "zipcode": 57225, "impressions": 23, "unique_impressions": 0 } ] },
+      { "label": "AWARENESS_Digital Video_Sioux Falls", "data": [ { "zipcode": 57104, "impressions": 35.267, "unique_impressions": 4.112 }, { "zipcode": 57103, "impressions": 48.87, "unique_impressions": 5.194 }, { "zipcode": 57105, "impressions": 21.64, "unique_impressions": 3.172 }, { "zipcode": 57110, "impressions": 19.79, "unique_impressions": 2.906 }, { "zipcode": 57117, "impressions": 31, "unique_impressions": 4 }, { "zipcode": 57107, "impressions": 11.799, "unique_impressions": 1.663 } ] },
+      { "label": "HYPERLOCAL_Digital Video_Sioux Falls", "data": [ { "zipcode": 57104, "impressions": 13.551, "unique_impressions": 535 }, { "zipcode": 57103, "impressions": 12.06, "unique_impressions": 589 }, { "zipcode": 57105, "impressions": 7.576, "unique_impressions": 436 }, { "zipcode": 57110, "impressions": 8.012, "unique_impressions": 452 }, { "zipcode": 57117, "impressions": 21, "unique_impressions": 2 }, { "zipcode": 57107, "impressions": 5.459, "unique_impressions": 208 } ] },
+      { "label": "HYPERLOCAL_Display_Sioux Falls", "data": [ { "zipcode": 57015, "impressions": 192, "unique_impressions": 3 }, { "zipcode": 57104, "impressions": 31.224, "unique_impressions": 402 }, { "zipcode": 57043, "impressions": 697, "unique_impressions": 6 }, { "zipcode": 57103, "impressions": 55.279, "unique_impressions": 469 }, { "zipcode": 57022, "impressions": 912, "unique_impressions": 23 }, { "zipcode": 57105, "impressions": 34.792, "unique_impressions": 325 }, { "zipcode": 57033, "impressions": 2.481, "unique_impressions": 50 }, { "zipcode": 57048, "impressions": 36, "unique_impressions": 2 }, { "zipcode": 57197, "impressions": 4.291, "unique_impressions": 50 }, { "zipcode": 57013, "impressions": 922, "unique_impressions": 25 }, { "zipcode": 57110, "impressions": 33.827, "unique_impressions": 293 }, { "zipcode": 57070, "impressions": 86, "unique_impressions": 6 }, { "zipcode": 57005, "impressions": 7.992, "unique_impressions": 154 }, { "zipcode": 57035, "impressions": 247, "unique_impressions": 6 }, { "zipcode": 57030, "impressions": 191, "unique_impressions": 13 }, { "zipcode": 57055, "impressions": 213, "unique_impressions": 5 }, { "zipcode": 57077, "impressions": 384, "unique_impressions": 7 }, { "zipcode": 57106, "impressions": 49.346, "unique_impressions": 681 }, { "zipcode": 57107, "impressions": 10.614, "unique_impressions": 132 }, { "zipcode": 57053, "impressions": 1.203, "unique_impressions": 17 }, { "zipcode": 57108, "impressions": 44.169, "unique_impressions": 502 }, { "zipcode": 57064, "impressions": 3.72, "unique_impressions": 74 }, { "zipcode": 57018, "impressions": 419, "unique_impressions": 10 }, { "zipcode": 57068, "impressions": 212, "unique_impressions": 6 }, { "zipcode": 57039, "impressions": 2.934, "unique_impressions": 33 }, { "zipcode": 57016, "impressions": 14, "unique_impressions": 2 }, { "zipcode": 57036, "impressions": 25, "unique_impressions": 2 }, { "zipcode": 57021, "impressions": 2, "unique_impressions": 2 }, { "zipcode": 57014, "impressions": 117, "unique_impressions": 8 }, { "zipcode": 57020, "impressions": 193, "unique_impressions": 4 }, { "zipcode": 57003, "impressions": 1.35, "unique_impressions": 12 }, { "zipcode": 57032, "impressions": 6.785, "unique_impressions": 113 }, ] },
+      { "label": "HYPERLOCAL_Display_Sioux Falls_LAL", "data": [ { "zipcode": 57015, "impressions": 226, "unique_impressions": 23 }, { "zipcode": 57104, "impressions": 53.908, "unique_impressions": 2.79 }, { "zipcode": 57043, "impressions": 1.217, "unique_impressions": 44 }, { "zipcode": 57103, "impressions": 87.742, "unique_impressions": 3.668 }, { "zipcode": 57022, "impressions": 2.565, "unique_impressions": 330 }, { "zipcode": 57105, "impressions": 42.784, "unique_impressions": 2.083 }, { "zipcode": 57033, "impressions": 6.701, "unique_impressions": 535 }, { "zipcode": 57048, "impressions": 380, "unique_impressions": 51 }, { "zipcode": 57197, "impressions": 12.005, "unique_impressions": 519 }, { "zipcode": 57027, "impressions": 37, "unique_impressions": 2 }, { "zipcode": 57013, "impressions": 2.561, "unique_impressions": 199 }, { "zipcode": 57110, "impressions": 47.661, "unique_impressions": 2.043 }, { "zipcode": 57117, "impressions": 58, "unique_impressions": 7 }, { "zipcode": 57070, "impressions": 379, "unique_impressions": 40 }, { "zipcode": 57005, "impressions": 12.457, "unique_impressions": 948 }, { "zipcode": 57035, "impressions": 1.294, "unique_impressions": 55 }, { "zipcode": 57030, "impressions": 2.227, "unique_impressions": 208 }, { "zipcode": 57055, "impressions": 852, "unique_impressions": 31 }, { "zipcode": 57077, "impressions": 1.707, "unique_impressions": 74 }, { "zipcode": 57106, "impressions": 102.422, "unique_impressions": 5.101 }, { "zipcode": 57107, "impressions": 27.886, "unique_impressions": 1.18 }, { "zipcode": 57053, "impressions": 1.722, "unique_impressions": 113 }, { "zipcode": 57108, "impressions": 83.871, "unique_impressions": 3.708 }, { "zipcode": 57064, "impressions": 9.289, "unique_impressions": 508 }, { "zipcode": 57018, "impressions": 1.295, "unique_impressions": 57 }, { "zipcode": 57068, "impressions": 463, "unique_impressions": 46 }, { "zipcode": 57039, "impressions": 6.046, "unique_impressions": 250 }, { "zipcode": 57016, "impressions": 387, "unique_impressions": 41 }, { "zipcode": 57036, "impressions": 290, "unique_impressions": 21 }, { "zipcode": 57021, "impressions": 37, "unique_impressions": 8 }, { "zipcode": 57014, "impressions": 549, "unique_impressions": 61 }, { "zipcode": 57020, "impressions": 717, "unique_impressions": 75 }, { "zipcode": 57003, "impressions": 1.007, "unique_impressions": 90 }, { "zipcode": 57032, "impressions": 14.997, "unique_impressions": 599 }, { "zipcode": 57041, "impressions": 17, "unique_impressions": 5 }, ] },
+      { "label": "HYPERLOCAL_Native_Sioux Falls", "data": [ { "zipcode": 57015, "impressions": 116, "unique_impressions": 11 }, { "zipcode": 57104, "impressions": 20.591, "unique_impressions": 754 }, { "zipcode": 57043, "impressions": 153, "unique_impressions": 8 }, { "zipcode": 57103, "impressions": 21.797, "unique_impressions": 870 }, { "zipcode": 57022, "impressions": 397, "unique_impressions": 38 }, { "zipcode": 57105, "impressions": 11.991, "unique_impressions": 587 }, { "zipcode": 57033, "impressions": 571, "unique_impressions": 58 }, { "zipcode": 57048, "impressions": 4, "unique_impressions": 1 }, { "zipcode": 57197, "impressions": 5.464, "unique_impressions": 143 }, { "zipcode": 57013, "impressions": 874, "unique_impressions": 37 }, { "zipcode": 57110, "impressions": 14.408, "unique_impressions": 551 }, { "zipcode": 57117, "impressions": 3, "unique_impressions": 0 }, { "zipcode": 57070, "impressions": 127, "unique_impressions": 6 }, { "zipcode": 57005, "impressions": 4.727, "unique_impressions": 283 }, { "zipcode": 57035, "impressions": 150, "unique_impressions": 12 }, { "zipcode": 57030, "impressions": 365, "unique_impressions": 42 }, { "zipcode": 57055, "impressions": 52, "unique_impressions": 11 }, { "zipcode": 57077, "impressions": 540, "unique_impressions": 16 }, { "zipcode": 57106, "impressions": 33.013, "unique_impressions": 1.302 }, { "zipcode": 57107, "impressions": 5.584, "unique_impressions": 265 }, { "zipcode": 57053, "impressions": 1.326, "unique_impressions": 23 }, { "zipcode": 57108, "impressions": 30.545, "unique_impressions": 1.069 }, { "zipcode": 57064, "impressions": 2.463, "unique_impressions": 142 }, { "zipcode": 57018, "impressions": 36, "unique_impressions": 14 }, { "zipcode": 57068, "impressions": 153, "unique_impressions": 16 }, { "zipcode": 57039, "impressions": 3.251, "unique_impressions": 51 }, { "zipcode": 57016, "impressions": 6, "unique_impressions": 3 }, { "zipcode": 57036, "impressions": 10, "unique_impressions": 3 }, { "zipcode": 57014, "impressions": 215, "unique_impressions": 16 }, { "zipcode": 57020, "impressions": 136, "unique_impressions": 17 }, { "zipcode": 57003, "impressions": 280, "unique_impressions": 16 }, { "zipcode": 57032, "impressions": 4.029, "unique_impressions": 174 } ] },
+      { "label": "HYPERLOCAL_Native_Sioux Falls_LAL", "data": [ { "zipcode": 57015, "impressions": 79, "unique_impressions": 18 }, { "zipcode": 57104, "impressions": 18.825, "unique_impressions": 2.535 }, { "zipcode": 57043, "impressions": 156, "unique_impressions": 27 }, { "zipcode": 57103, "impressions": 20.646, "unique_impressions": 2.672 }, { "zipcode": 57022, "impressions": 1.628, "unique_impressions": 244 }, { "zipcode": 57105, "impressions": 11.332, "unique_impressions": 1.75 }, { "zipcode": 57033, "impressions": 2.62, "unique_impressions": 386 }, { "zipcode": 57048, "impressions": 146, "unique_impressions": 43 }, { "zipcode": 57197, "impressions": 4.454, "unique_impressions": 376 }, { "zipcode": 57027, "impressions": 1, "unique_impressions": 1 }, { "zipcode": 57013, "impressions": 1.195, "unique_impressions": 164 }, { "zipcode": 57110, "impressions": 10.743, "unique_impressions": 1.553 }, { "zipcode": 57117, "impressions": 16, "unique_impressions": 5 }, { "zipcode": 57070, "impressions": 112, "unique_impressions": 31 }, { "zipcode": 57005, "impressions": 4.039, "unique_impressions": 726 }, { "zipcode": 57035, "impressions": 275, "unique_impressions": 42 }, { "zipcode": 57030, "impressions": 1.176, "unique_impressions": 178 }, { "zipcode": 57055, "impressions": 93, "unique_impressions": 24 }, { "zipcode": 57077, "impressions": 502, "unique_impressions": 47 }, { "zipcode": 57106, "impressions": 30.819, "unique_impressions": 4.294 }, { "zipcode": 57107, "impressions": 6.455, "unique_impressions": 915 }, { "zipcode": 57053, "impressions": 606, "unique_impressions": 89 }, { "zipcode": 57108, "impressions": 22.968, "unique_impressions": 2.995 }, { "zipcode": 57064, "impressions": 2.382, "unique_impressions": 363 }, { "zipcode": 57018, "impressions": 234, "unique_impressions": 31 }, { "zipcode": 57068, "impressions": 142, "unique_impressions": 20 }, { "zipcode": 57039, "impressions": 902, "unique_impressions": 143 }, { "zipcode": 57016, "impressions": 133, "unique_impressions": 25 }, { "zipcode": 57036, "impressions": 85, "unique_impressions": 19 }, { "zipcode": 57021, "impressions": 15, "unique_impressions": 6 }, { "zipcode": 57014, "impressions": 171, "unique_impressions": 37 }, { "zipcode": 57020, "impressions": 249, "unique_impressions": 29 }, { "zipcode": 57003, "impressions": 251, "unique_impressions": 58 }, { "zipcode": 57032, "impressions": 2.538, "unique_impressions": 366 }, { "zipcode": 57041, "impressions": 15, "unique_impressions": 4 } ] } ]
+
+      for(c in campaigns) {
+        let option = document.createElement('option')
+            option.innerHTML = campaigns[c].label
+            campaign_select.appendChild(option)
+
+        for(d in campaigns[c].data) {
+          locations.push({
+            label: campaigns[c].label,
+            query: "Siuox Falls, " + campaigns[c].data[d].zipcode,
+            impressions: campaigns[c].data[d].impressions,
+            unique_impressions: campaigns[c].data[d].unique_impressions
+          })
+        }
+
+      }
+
+      let lnglat = Array()
+
+      let map = new mapboxgl.Map({
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-96.728333, 43.547302],
+        container: 'map',
+        zoom: 12
+      });
+    
+      locations.forEach(myGeocoder);
+
+      function myGeocoder(item, index) {
+        mapboxClient.geocoding
+          .forwardGeocode({
+            query: item.query,
+            autocomplete: false,
+            limit: 1
+          })
+          .send()
+          .then(function (response) {
+            
+            if(response &&
+              response.body &&
+              response.body.features &&
+              response.body.features.length
+            ) {
+              //--- Get the Response from the MapBox Server...
+              let feature = response.body.features[0];
+
+              //--- Console Display Where We're at in the List...
+              console.log(locations[index]);
+              console.log(response.body.features[0].center);
+
+              //--- Get Longitude-Latitute Center of this Location from Response...
+              lnglat[index] = response.body.features[0].center
+
+              // Create a marker and add it to the map.
+              // new mapboxgl.Marker().setLngLat(lnglat[index]).addTo(map);
+
+              new mapboxgl.Popup({ closeOnClick: false })
+              .setLngLat(lnglat[index])
+              .setHTML(`
+                <span class="font-bold">${locations[index].label}</span>
+                <hr>
+                ${locations[index].query}
+                <div class="grid grid-cols-2">
+                  <div>
+                    <span class="text-2xl font-bold">${locations[index].impressions}</span>
+                    Impressions
+                  </div>
+                  <div>
+                    <span class="text-2xl font-bold">${locations[index].unique_impressions}</span><br>
+                    Unique Impressions
+                  </div>
+                </div>
+              `)
+              .addTo(map);
+            }
+          });
+
+      }
+
+  </script>
+
+</body>
+
+</html>
