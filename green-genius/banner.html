@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="https://creative.stackadapt.com/js/iframe-ct.js"></script>
+    <title>Green_Genius_NYC</title>
+    <style>
+      * { padding: 0; margin: 0; }
+      body { overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <!-- Creative Container -->
+    <div id="creative"></div>
+    <!-- Hidden Impression Tracker -->
+    <img id="impression-tracker" src="" style="display: none" />
+    <script>
+      // Function to retrieve query parameters from the URL
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+      // Function to dynamically set the creative based on the size
+
+      onresize = (event) => {
+        displayCreative();
+      };
+
+      function displayCreative() {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+
+        const placement = getQueryParam("placement");
+        const clickMacro = getQueryParam("macro");
+
+        let src = "";
+
+        if (w == 300 && h == 250) {
+          src = "Green_Genius_300x250.gif";
+        } else if (w == 970 && h == 250) {
+          src = "Green_Genius_970x250.jpg";
+        } else if (w == 728 && h == 90) {
+          src = "Green_Genius_728x90.gif";
+        } else if (w == 320 && h == 50) {
+          src = "Green_Genius_320x50.gif";
+        } else if (w == 300 && h == 600) {
+          src = "Green_Genius_300x600.jpg";
+        } else {
+          // Default creative if no match is found
+          src = "Green_Genius_300x250.gif";
+        }
+
+        // Insert the creative and set up the click URL
+        document.getElementById("creative").innerHTML = `
+          <a href="https://data.script.flowershop.media/redirect?url=https%3A%2F%2Fgreengeniusnyc.com%2F%3Futm_source%3Dcannstudio%26utm_medium%3Ddisplay%26utm_campaign%3DGreenGenius_NYC%26ADVERTISER_ID%3DGreenGenius%26CAMPAIGN_NAME%3DSA_CAMPAIGN_NAME" target="_blank">
+            <img src="./assets/${src}" height="100%" alt="Green Genius Creative" style="border:0;">
+          </a>`;
+
+        // Insert the impression tracker
+        document.getElementById(
+          "impression-tracker"
+        ).src = `https://data.script.flowershop.media/impression.gif?CAMPAIGN_NAME={SA_CAMPAIGN_NAME}&ADVERTISER=GreenGenius&CHANNEL={SA_CHANNEL_TYPE}&CAMPAIGN_ID={SA_CAMPAIGN_ID}&REF_DOMAIN=${src}`;
+      }
+
+      // Load the creative on page load
+      window.onload = displayCreative;
+    </script>
+  </body>
+</html>
