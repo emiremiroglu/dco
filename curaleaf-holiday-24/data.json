@@ -1,0 +1,118 @@
+{
+  "AZ": {
+    "name": "Arizona",
+    "sheet_id": "19mTCJ1Gip7p3rAnGKa190xmY8Y1DTf4ERfzrMJhrnEI",
+    "license": "Devine Desert Healing AU: 00000026ESRZ88769978",
+    "creative": "https://dlyyrzii9sh86.cloudfront.net/curaleaf-dco/assets/bg-arizona.jpg",
+    "locations": {
+      "AZ-0": { "name": "48th Street", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-48th-street?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+48thStreet+Dynamic+Product" },
+      "AZ-2072205752": { "name": "Sedona", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-sedona?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+Sedona+Dynamic+Product" },
+      "AZ-1486558315": { "name": "Youngtown", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-youngtown?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+Youngtown+Dynamic+Product" },
+      "AZ-969310154": { "name": "Glendale", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-glendale?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+Glendale+Dynamic+Product" },
+      "AZ-1631058255": { "name": "Tucson", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-tucson?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+Tucson+Dynamic+Product" },
+      "AZ-5560972": { "name": "Scottsdale", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-scottsdale?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+Scottsdale+Dynamic+Product" },
+      "AZ-651714245": { "name": "Bell", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-bell?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+Bell+Dynamic+Product" },
+      "AZ-1218252807": { "name": "Camelback", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-camelback?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+Camelback+Dynamic+Product" },
+      "AZ-2022263091": { "name": "Central", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-central?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+Central+Dynamic+Product" },
+      "AZ-43889274": { "name": "Gilbert", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-gilbert?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+Gilbert+Dynamic+Product" },
+      "AZ-1991282143": { "name": "Midtown", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-midtown?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+Midtown+Dynamic+Product" },
+      "AZ-1554684428": { "name": "Pavilions", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-pavilions?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+Pavilions+Dynamic+Product" },
+      "AZ-818229159": { "name": "Peoria", "click": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-peoria?utm_source=Hearst&utm_medium=display&utm_campaign=AZ+Peoria+Dynamic+Product" }
+    }
+  },
+  "NJ": {
+    "name": "New Jersey",
+    "sheet_id": "15pxZRD07RJuqbHC-pXHdmvc0hhXFwsjbaqodIYjm984",
+    "license": "MRE-000007, MRE-0000008, MRE-000009",
+    "creative": "https://dlyyrzii9sh86.cloudfront.net/curaleaf-dco/assets/bg-new-jersey.jpg",
+    "locations": {
+      "NJ-0": { "name": "Bordentown", "click": "https://curaleaf.com/shop/new-jersey/curaleaf-nj-bordentown-adult-use?utm_source=Hearst&utm_medium=display&utm_campaign=NJ+Bordentown+Dynamic+Product" },
+      "NJ-409006268": { "name": "Edgewater Park", "click": "https://curaleaf.com/shop/new-jersey/curaleaf-nj-edgewater-park-adult-use?utm_source=Hearst&utm_medium=display&utm_campaign=NJ+EdgewaterParkDynamic+Product" },
+      "NJ-1942770882": { "name": "Bellmawr", "click": "https://curaleaf.com/shop/new-jersey/curaleaf-nj-bellmawr-adult-use?utm_source=Hearst&utm_medium=display&utm_campaign=NJ+Bellmawr+Dynamic+Product" }
+    }
+  },
+  "FL": {
+    "name": "Florida",
+    "sheet_id": "1ZTF-UJtDChbjxbwlpBAhXLRo0NrVotxQvcvzoeYSd8Q",
+    "license": "MMTC-2015-0001",
+    "creative": "https://dlyyrzii9sh86.cloudfront.net/curaleaf-dco/assets/bg-florida.jpg",
+    "locations": {
+      "FL-0": { "name": "Glades", "click": "https://curaleaf.com/shop/florida/curaleaf-boca-raton-glades?utm_source=Hearst&utm_medium=display&utm_campaign=FL+BocaRatonGlades+Dynamic+Product" },
+      "FL-228927338": { "name": "West", "click": "https://curaleaf.com/shop/florida/curaleaf-boca-raton-west?utm_source=Hearst&utm_medium=display&utm_campaign=FL+BocaRatonWest+Dynamic+Product" },
+      "FL-142505160": { "name": "Daytona", "click": "https://curaleaf.com/shop/florida/curaleaf-dispensary-daytona?utm_source=Hearst&utm_medium=display&utm_campaign=FL+Daytona+Dynamic+Product" },
+      "FL-1517144898": { "name": "Beach", "click": "https://curaleaf.com/shop/florida/curaleaf-miami-south-beach?utm_source=Hearst&utm_medium=display&utm_campaign=FL+MiamiSouthBeach+Dynamic+Product" },
+      "FL-1472315644": { "name": "Drive", "click": "https://curaleaf.com/shop/florida/curaleaf-orlando-international-drive?utm_source=Hearst&utm_medium=display&utm_campaign=FL+OrlandoInternationalDrive+Dynamic+Product" },
+      "FL-733107300": { "name": "Palm Bay", "click": "https://curaleaf.com/shop/florida/curaleaf-dispensary-palm-bay?utm_source=Hearst&utm_medium=display&utm_campaign=FL+PalmBay+Dynamic+Product" },
+      "FL-982635345": { "name": "Gardens", "click": "https://curaleaf.com/shop/florida/curaleaf-palm-beach-gardens?utm_source=Hearst&utm_medium=display&utm_campaign=FL+PalmBeachGardens+Dynamic+Product" },
+      "FL-2081201181": { "name": "Panama City", "click": "https://curaleaf.com/shop/florida/curaleaf-dispensary-panama-city?utm_source=Hearst&utm_medium=display&utm_campaign=FL+PanamaCity+Dynamic+Product" },
+      "FL-853487838": { "name": "Sanford", "click": "https://curaleaf.com/shop/florida/curaleaf-dispensary-sanford?utm_source=Hearst&utm_medium=display&utm_campaign=FL+Sanford+Dynamic+Product" },
+      "FL-2075796088": { "name": "Sarasota", "click": "https://curaleaf.com/shop/florida/curaleaf-dispensary-sarasota?utm_source=Hearst&utm_medium=display&utm_campaign=FL+Sarasota+Dynamic+Product" },
+      "FL-833560280": { "name": "Street", "click": "https://curaleaf.com/shop/florida/curaleaf-tallahassee-west-tennessee-street?utm_source=Hearst&utm_medium=display&utm_campaign=FL+TallahasseeWest+Dynamic+Product" },
+      "FL-1922109991": { "name": "Tampa", "click": "https://curaleaf.com/shop/florida/curaleaf-dispensary-tampa?utm_source=Hearst&utm_medium=display&utm_campaign=FL+Tampa+Dynamic+Product" },
+      "FL-984790391": { "name": "Clematis", "click": "https://curaleaf.com/shop/florida/curaleaf-west-palm-beach-clematis?utm_source=Hearst&utm_medium=display&utm_campaign=FL+Clematis+Dynamic+Product" },
+      "FL-1171004114": { "name": "West Palm Beach", "click": "https://curaleaf.com/shop/florida/curaleaf-dispensary-west-palm-beach?utm_source=Hearst&utm_medium=display&utm_campaign=FL+WestPalmBeach+Dynamic+Product" }
+    }
+  },
+  "NV": {
+    "name": "Nevada",
+    "sheet_id": "1R8RAyKcN8BMRVab3Km4UFY8NsxANxNNeKMD6vFthENA",
+    "license": "Keep out of reach of children. For use only by adults 21 years of age and older. CURALEAF RD011",
+    "creative": "https://dlyyrzii9sh86.cloudfront.net/curaleaf-dco/assets/bg-nevada.jpg",
+    "locations": {
+      "NV-0": { "name": "Las Vegas", "click": "https://curaleaf.com/shop/nevada/curaleaf-nv-las-vegas?utm_source=Hearst&utm_medium=display&utm_campaign=NV+Las+Vegas+Dynamic+Product" },
+      "NV-299521552": { "name": "Las Vegas Strip", "click": "https://reefdispensaries.com/locations/las-vegas/order-now?utm_source=Hearst&utm_medium=display&utm_campaign=NV+Las+Vegas+Strip+Dynamic+Product" }
+    }
+  },
+  "IL": {
+    "name": "Illinois",
+    "sheet_id": "1nBi85ECOI1iwlDcDVczNtb5MzaqJP9KfWOO_BWLtfRY",
+    "license": null,
+    "creative": "https://dlyyrzii9sh86.cloudfront.net/curaleaf-dco/assets/bg-illinois.jpg",
+    "locations": {
+      "IL-0": { "name": "Worth", "click": "https://curaleaf.com/shop/illinois/curaleaf-il-worth?utm_source=Hearst&utm_medium=display&utm_campaign=IL+Worth+Dynamic+Product" },
+      "IL-1124825085": { "name": "New Lenox", "click": "https://curaleaf.com/shop/illinois/curaleaf-il-new-lenox?utm_source=Hearst&utm_medium=display&utm_campaign=IL+New+Lenox+Dynamic+Product" },
+      "IL-1869477012": { "name": "Weed Street", "click": "https://curaleaf.com/shop/illinois/curaleaf-il-weed-street?utm_source=Hearst&utm_medium=display&utm_campaign=IL+Weed+Street+Dynamic+Product" },
+      "IL-1110409300": { "name": "Morris", "click": "https://curaleaf.com/shop/illinois/curaleaf-il-morris?utm_source=Hearst&utm_medium=display&utm_campaign=IL+Morris+Dynamic+Product" },
+      "IL-440251243": { "name": "Melrose Park", "click": "https://curaleaf.com/shop/illinois/curaleaf-il-melrose-park?utm_source=Hearst&utm_medium=display&utm_campaign=IL+Melrose+Park+Dynamic+Product" },
+      "IL-1222824303": { "name": "Westmont", "click": "https://curaleaf.com/shop/illinois/curaleaf-il-westmont?utm_source=Hearst&utm_medium=display&utm_campaign=IL+Westmont+Dynamic+Product" },
+      "IL-1682183825": { "name": "Skokie", "click": "https://curaleaf.com/shop/illinois/curaleaf-il-skokie?utm_source=Hearst&utm_medium=display&utm_campaign=IL+Skokie+Dynamic+Product" },
+      "IL-1518130193": { "name": "Northbrook", "click": "https://curaleaf.com/shop/illinois/curaleaf-il-northbrook?utm_source=Hearst&utm_medium=display&utm_campaign=IL+Northbrook+Dynamic+Product" }
+    }
+  },
+  "MA": {
+    "name": "Massachusetts",
+    "sheet_id": "1V6gVJwcdrCfbnKSVR4j0Ik4LqDryuKXwhlUVZXywLZ8",
+    "license": "CDPH-10001355, 404R-00025, AMS 351, Curaleaf RD011",
+    "creative": "https://dlyyrzii9sh86.cloudfront.net/curaleaf-dco/assets/bg-massachusetts.jpg",
+    "locations": {
+      "MA-0": { "name": "Oxford", "click": "https://curaleaf.com/shop/massachusetts/curaleaf-ma-oxford-adult-use?utm_source=Hearst&utm_medium=display&utm_campaign=MA+Oxford+Dynamic+Product" },
+      "MA-1837007871": { "name": "Provinscetown", "click": "https://curaleaf.com/shop/massachusetts/curaleaf-ma-provincetown-adult-use?utm_source=Hearst&utm_medium=display&utm_campaign=MA+Provincetown+Dynamic+Product" },
+      "MA-1346687204": { "name": "Ware", "click": "https://curaleaf.com/shop/massachusetts/curaleaf-ma-ware-adult-use?utm_source=Hearst&utm_medium=display&utm_campaign=MA+Ware+Dynamic+Product" },
+      "MA-160140398": { "name": "Hanover", "click": "https://curaleaf.com/shop/massachusetts/curaleaf-ma-hanover-medical?utm_source=Hearst&utm_medium=display&utm_campaign=MA+Hanover+Dynamic+Product" }
+    }
+  },
+  "CT": {
+    "name": "Connecticut",
+    "sheet_id": "1f7n7VtRhe2woUivBpXu7KowDBJq-GaNMCGrXu3wJh3I",
+    "license": null,
+    "creative": "https://dlyyrzii9sh86.cloudfront.net/curaleaf-dco/assets/bg-connecticut.jpg",
+    "locations": {
+      "CT-0": { "name": "Hartford", "click": "https://ct.curaleaf.com/shop/curaleaf-ct-hartford-au?utm_source=Hearst&utm_medium=display&utm_campaign=CT+Hartford+Dynamic+Product" },
+      "CT-238754765": { "name": "Manchester", "click": "https://ct.curaleaf.com/shop/curaleaf-ct-manchester-au?utm_source=Hearst&utm_medium=display&utm_campaign=CT+Manchester+Dynamic+Product" },
+      "CT-804740202": { "name": "Groton", "click": "https://ct.curaleaf.com/shop/curaleaf-ct-groton-au?utm_source=Hearst&utm_medium=display&utm_campaign=CT+Groton+Dynamic+Product" },
+      "CT-1206562958": { "name": "Stamford", "click": "https://ct.curaleaf.com/shop/curaleaf-ct-stamford-au?utm_source=Hearst&utm_medium=display&utm_campaign=CT+Stamford+Dynamic+Product" }
+    }
+  },
+  "MD": {
+    "name": "Maryland",
+    "sheet_id": "10sW_gQWM1sxvpFyZkt814JlcpzvXvk7_hfaty7Pljso",
+    "license": "CDPH-10001355, 404R-00025, AMS 351, Curaleaf RD011",
+    "creative": "https://dlyyrzii9sh86.cloudfront.net/curaleaf-dco/assets/bg-maryland.jpg",
+    "locations": {
+      "MD-0": { "name": "Columbia", "click": "https://curaleaf.com/shop/maryland/curaleaf-md-columbia-au?utm_source=Hearst&utm_medium=display&utm_campaign=MD+Columbia+Dynamic+Product" },
+      "MD-633922624": { "name": "Reistertown", "click": "https://curaleaf.com/shop/maryland/curaleaf-md-reisterstown-au?utm_source=Hearst&utm_medium=display&utm_campaign=MD+Reisterstown+Dynamic+Product" },
+      "MD-239829262": { "name": "Montgomery Village", "click": "https://curaleaf.com/shop/maryland/curaleaf-md-gaithersburg-montgomery-village-au?utm_source=Hearst&utm_medium=display&utm_campaign=MD+Montgomery+Village+Dynamic+Product" },
+      "MD-1821238702": { "name": "Frederick", "click": "https://curaleaf.com/shop/maryland/curaleaf-dispensary-md-frederick-au?utm_source=Hearst&utm_medium=display&utm_campaign=MD+Frederick+Dynamic+Product" }
+    }
+  }
+}
