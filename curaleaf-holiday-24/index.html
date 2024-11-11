@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css" rel="stylesheet">
-  <script type="text/javascript" src="https://creative.stackadapt.com/js/iframe-ct.js"></script>
-  <title>Curaleaf</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <title>Preview: Curaleaf Holiday '24</title>
   <style>
     p {
       margin-bottom: 20px !important;
@@ -23,34 +23,41 @@
   </style>
 </head>
 <body class="py-20 bg-zinc-50 dark:bg-zinc-800 dark:text-zinc-200">
+  <main class="max-w-[970px] mx-auto">
   <header class="fixed top-0 left-0 right-0 py-3 w-full bg-zinc-50 dark:bg-zinc-700 shadow-lg z-50">
     <section class="flex justify-between items-center max-w-[970px] mx-auto">
       <strong>
         Curaleaf Holiday '24 Preview
       </strong>
       <div class="flex items-center gap-3">
-        <select id="date" class="min-w-[200px] block w-full rounded-md border-zinc-300 dark:border-zinc-500 dark:bg-zinc-900 py-2 pl-3 pr-10 text-bas focus:outline-none sm:text-sm">
-          <option>Choose Date</option>
-          <option value="2024-11-27">Green Wednesday: 2024-11-27</option>
-          <option value="2024-11-29">Black Friday: 2024-11-29</option>
-          <option value="2024-12-02">Cyber Monday: 2024-12-02</option>
-          <option value="2024-12-25">Christmas: 2024-12-25</option>
-          <option value="2024-12-26">Hanukkah: 2024-12-26</option>
-          <option value="2024-12-31">New Years: 2024-12-31</option>
+        <select v-model="store.date" class="min-w-[200px] block w-full rounded-md border-zinc-300 dark:border-zinc-500 dark:bg-zinc-900 py-2 pl-3 pr-10 text-bas focus:outline-none sm:text-sm">
+          <option
+            v-for="event in store.calendar"
+            :value="event.date"
+          >
+            {{event.name}}
+          </option>
         </select>
-        <select id="locations" class="min-w-[200px] block w-full rounded-md border-zinc-300 dark:border-zinc-500 dark:bg-zinc-900 py-2 pl-3 pr-10 text-bas focus:outline-none sm:text-sm"></select>
+        <select v-model="store.code" class="min-w-[200px] block w-full rounded-md border-zinc-300 dark:border-zinc-500 dark:bg-zinc-900 py-2 pl-3 pr-10 text-bas focus:outline-none sm:text-sm"> 
+          <optgroup v-for="state in store.states" :label="state.name">
+            <option
+              v-for="(location, code) in state.locations"
+              :value="code">
+              {{location.name}}
+            </option>
+          </optgroup>
+        </select>
       </div>
     </section>    
   </header>
-  <main class="max-w-[970px] mx-auto">
     <section class="mb-10">
       <div>
-        <iframe class="shadow" src="./banner.html?code=AZ-1631058255" width="970" height="250"></iframe>
+        <iframe class="shadow" :src="store.src" width="970" height="250"></iframe>
         <span class="text-xs opacity-30">970x250</span>
       </div>
 
       <div>
-        <iframe class="shadow" src="./banner.html?code=AZ-1631058255" width="728" height="90"></iframe>
+        <iframe class="shadow" :src="store.src" width="728" height="90"></iframe>
         <span class="text-xs opacity-30">728x90</span>
       </div>
     </section>
@@ -68,74 +75,65 @@
       </div>
       <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <iframe class="shadow" src="./banner.html?code=AZ-1631058255" width="300" height="250"></iframe>
+        <iframe class="shadow" :src="store.src" width="300" height="250"></iframe>
         <span class="text-xs opacity-30">300x250</span>
         
-        <iframe class="shadow" src="./banner.html?code=AZ-1631058255" width="300" height="600"></iframe>
+        <iframe class="shadow" :src="store.src" width="300" height="600"></iframe>
         <span class="text-xs opacity-30">300x600</span>
       </div>
     </section>
 
     <section class="grid grid-cols-3 gap-6">
       <div>
-        <iframe class="shadow" src="./banner.html?code=AZ-1631058255" width="320" height="100"></iframe>
+        <iframe class="shadow" :src="store.src" width="320" height="100"></iframe>
         <span class="text-xs opacity-30">320x100</span>
       </div>
       <div>
-        <iframe class="shadow" src="./banner.html?code=AZ-1631058255" width="320" height="50"></iframe>
+        <iframe class="shadow" :src="store.src" width="320" height="50"></iframe>
         <span class="text-xs opacity-30">320x50</span>
       </div>
     </section>
 
   </main>
   <script>
-    fetch('./data.json')
-    .then(res => res.json())
-    .then(data => {
+    const { createApp, watch, reactive } = Vue
 
-      const qs = new URLSearchParams(window.location.search);
-      
-      const code = qs.get('code') || 'AZ-0';
-      const date = qs.get('date') || '2024-11-27'
+    createApp({
 
-      const iframes = document.querySelectorAll('iframe');
+      setup() {
 
-      for(i in iframes) {
-        iframes[i].src = `./banner.html?code=${code}&date=${date}`
-      }
+        const store = reactive({
+          code: 'AZ-0',
+          date: '2024-11-27',
+          states: [],
+          src: null,
+          calendar: [
+            { name: "Green Wednesday", date: "2024-11-27"},
+            { name: "Black Friday", date: "2024-11-29"},
+            { name: "Cyber Monday", date: "2024-12-02"},
+            { name: "Christmas", date: "2024-12-25"},
+            { name: "Hanukkah", date: "2024-12-26"},
+            { name: "New Years", date: "2024-12-31"}
+          ]
+        })
 
-      let options = [
-        '<option>Choose Location</option>'
-      ]
-
-      for(key in data) {
-        let abbr = key
-        let state = data[key]
+        fetch('./data.json')
+        .then(res => res.json())
+        .then(data => {
+          store.states = data
+          store.src = `./banner.html?code=${store.code}&date=${store.date}`
+        })
         
-        options.push(
-          `<optgroup label="${state.name}">
-            ${Object.keys(state.locations).map(key => `
-              <option value="${key}" ${key === code ? 'selected' : ''}>
-                ${state.locations[key].name}
-              </option>
-            ` ).join("\n")}
-          </optgroup>`
-        )
+        watch(store, (store) => {
+          store.src = `./banner.html?code=${store.code}&date=${store.date}`
+        })
+
+        return {
+          store
+        }
+
       }
-      
-      locations.innerHTML = options.join('\n')
-
-      // Change the page url to update banners
-      document.getElementById('locations').onchange = function() {
-        window.location.href = `?code=${this.value}&date=${date}`
-      }
-
-      document.getElementById('date').onchange = function() {
-        window.location.href = `?code=${code}&date=${this.value}`;
-      }
-
-
-    })
+    }).mount('main')
   </script>
 </body>
 </html>
